@@ -2,7 +2,7 @@ package shi.fxsol.uitls;
 
 import java.util.Calendar;
 
-public class DateUtils {
+public class FxCalenderUtils {
 	
 	public static Calendar getAyearBmonthXweekYday(int year, int month, int week , int day){
 		Calendar wantCalendar = Calendar.getInstance();
@@ -27,6 +27,27 @@ public class DateUtils {
 		if(wantCalendar.get(Calendar.MONTH)!=month) return null;
 		
 		return wantCalendar;
+	}
+	
+	public static String convertCalenderDayOfWeek2String(int dayOfWeek){
+		switch(dayOfWeek){
+			case Calendar.SUNDAY:
+				return "SUNDAY";
+			case Calendar.MONDAY:
+				return "MONDAY";
+			case Calendar.TUESDAY:
+				return "TUESDAY";
+			case Calendar.WEDNESDAY:
+				return "WEDNESDAY";
+			case Calendar.THURSDAY:
+				return "THURSDAY";
+			case Calendar.FRIDAY:
+				return "FRIDAY";
+			case Calendar.SATURDAY:
+				return "SATURDAY";
+			default:
+				return "WTF of THIS";
+		}
 	}
 
 	public static void main(String[] args){
