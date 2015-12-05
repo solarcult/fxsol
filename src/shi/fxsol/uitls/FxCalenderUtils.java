@@ -50,6 +50,7 @@ public class FxCalenderUtils {
 		}
 	}
 	
+	@Deprecated
 	public static String convertCalenderMonth2String(int month){
 		switch(month){
 			case Calendar.JANUARY:
@@ -75,6 +76,37 @@ public class FxCalenderUtils {
 			case Calendar.NOVEMBER:
 				return "NOVEMBER";
 			case Calendar.DECEMBER:
+				return "DECEMBER";
+			default:
+				return "WTF of THIS MONTH";
+		}
+	}
+	
+	public static String convertNumberMonth2String(int month){
+		switch(month){
+			case 1:
+				return "JANUARY";
+			case 2:
+				return "FEBRUARY";
+			case 3:
+				return "MARCH";
+			case 4:
+				return "APRIL";
+			case 5:
+				return "MAY";
+			case 6:
+				return "JUNE";
+			case 7:
+				return "JULY";
+			case 8:
+				return "AUGUST";
+			case 9:
+				return "SEPTEMBER";
+			case 10:
+				return "OCTOBER";
+			case 11:
+				return "NOVEMBER";
+			case 12:
 				return "DECEMBER";
 			default:
 				return "WTF of THIS MONTH";

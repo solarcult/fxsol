@@ -113,8 +113,15 @@ public class FxMetaDataDaoImpl {
 		}
 	}
 	
-	public static List<FxMetaData> queryFxMetaDatas4nameXtimeframe(String fxname,String fxtimeframe){
+	public static List<FxMetaData> queryFxMetaDatas4nameXtimeframe(String fxname,String fxtimeframe,int lastNmonth){
 		List<FxMetaData> fxMetaDatas = new ArrayList<FxMetaData>();
+		
+		if(lastNmonth<=0){
+			lastNmonth = 1107;
+		}
+		
+		Calendar startdate =Calendar.getInstance();
+		startdate.add(Calendar.MONTH, -lastNmonth);
 		
 		Connection connection = DataBaseManager.getConnection();
 		PreparedStatement preStatement = null;
@@ -127,11 +134,13 @@ public class FxMetaDataDaoImpl {
 					+ "open,high,low,close,volumn,"
 					+ "weekofday,dayofweekinmonth,specialweek "
 					+ "from fxmetadata "
-					+ "where name = ? and timeframe = ? order by datetime asc"
+					+ "where name = ? and timeframe = ? and datetime > ? order by datetime asc"
 					);
 			
 			preStatement.setString(1, fxname);
 			preStatement.setString(2, fxtimeframe);
+			preStatement.setDate(3, new java.sql.Date(startdate.getTimeInMillis()));
+			
 			
 			ResultSet resultSet = preStatement.executeQuery();
 			while(resultSet.next())
@@ -222,7 +231,7 @@ public class FxMetaDataDaoImpl {
 		
 		insertFxMetaDataList(fxMetaDatas);
 		*/
-		for(FxMetaData fx : queryFxMetaDatas4nameXtimeframe("Me", "60")){
+		for(FxMetaData fx : queryFxMetaDatas4nameXtimeframe("Me", "60", 24)){
 			System.out.println(fx);
 		}
 		

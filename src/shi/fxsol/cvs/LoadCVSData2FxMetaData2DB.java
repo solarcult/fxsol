@@ -15,8 +15,8 @@ import shi.fxsol.vo.FxMetaData;
 
 public class LoadCVSData2FxMetaData2DB {
 
-	public static void loadFoler2DB(String foldername){
-		File folder = new File(foldername);
+	public static void loadFoler2DB(File folder){
+//		File folder = new File(foldername);
 		File[] files = folder.listFiles(new FilenameFilter() {
 			@Override
 			public boolean accept(File dir, String name) {
@@ -62,14 +62,22 @@ public class LoadCVSData2FxMetaData2DB {
 			String timeframe = filefullname.substring(timeframestart);
 			BufferedReader bufferedReader = null;
 			try {
-				
 				bufferedReader = new BufferedReader(new FileReader(csvfile));
+				
 				String oneline = bufferedReader.readLine();
-				FxMetaData fxMetaData = CSVReadUtils.retrieveOneLine(oneline);
-				if(fxMetaData!=null){
-					fxMetaData.setName(fxname);
-					fxMetaData.setTimeframe(timeframe);
-					fxMetaDatas.add(fxMetaData);
+				
+				while(oneline!=null){
+					try {
+						FxMetaData fxMetaData = CSVReadUtils.retrieveOneLine(oneline);
+						if(fxMetaData!=null){
+							fxMetaData.setName(fxname);
+							fxMetaData.setTimeframe(timeframe);
+							fxMetaDatas.add(fxMetaData);
+						}
+						oneline = bufferedReader.readLine();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
