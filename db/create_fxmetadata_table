@@ -1,0 +1,27 @@
+-- Table: fxmetadata
+
+-- DROP TABLE fxmetadata;
+
+CREATE TABLE fxmetadata
+(
+  id bigserial NOT NULL,
+  name text NOT NULL, -- 交易品种
+  timeframe text NOT NULL, -- 时间框架 分钟计数 1440
+  datetime date,
+  year integer NOT NULL,
+  month integer NOT NULL,
+  day integer NOT NULL,
+  sdate text, -- 日期的字符串类型 2014.09.09
+  stime text, -- 时间的字符串类型 11:07
+  hour integer NOT NULL,
+  minute integer NOT NULL,
+  open integer,
+  high integer,
+  low integer,
+  close integer,
+  volumn integer,
+  weekofday text, -- 星期几
+  dayofweekinmonth integer, -- 这个月的第几次星期N
+  specialweek text, -- 第一个/最后一个周
+  CONSTRAINT fxmetadata_pkey PRIMARY KEY (name, timeframe, year, month, day, hour, minute)
+)

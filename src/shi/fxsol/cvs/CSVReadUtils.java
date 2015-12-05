@@ -7,7 +7,7 @@ import shi.fxsol.uitls.FxCalenderUtils;
 import shi.fxsol.vo.FxMetaData;
 import shi.fxsol.vo.FxSpeicalDay;
 
-public class CVSReadUtils {
+public class CSVReadUtils {
 	
 	public static FxMetaData retrieveOneLine(String line){
 		FxMetaData fxMetaData = new FxMetaData();
@@ -17,7 +17,7 @@ public class CVSReadUtils {
 		
 		//解析日期
 		String sdate = st.nextToken();
-		String[] ymd = sdate.split(".");
+		String[] ymd = sdate.split("\\.");
 		if(ymd.length != 3) return null;
 		int year = Integer.parseInt(ymd[0]);
 		int month = Integer.parseInt(ymd[1]);
@@ -30,17 +30,17 @@ public class CVSReadUtils {
 		int minute = Integer.parseInt(times[1]);
 		
 		//open
-		int open = Integer.parseInt(st.nextToken())*1000;
+		int open = (int) (Double.parseDouble(st.nextToken())*10000);
 		//high
-		int high = Integer.parseInt(st.nextToken())*1000;
+		int high = (int) (Double.parseDouble(st.nextToken())*10000);
 		//low
-		int low = Integer.parseInt(st.nextToken())*1000;
+		int low = (int) (Double.parseDouble(st.nextToken())*10000);
 		//close
-		int close = Integer.parseInt(st.nextToken())*1000;
+		int close = (int) (Double.parseDouble(st.nextToken())*10000);
 		//volumn
 		int volumn = Integer.parseInt(st.nextToken());
 		
-		
+		//此处应该注明是标准时间,即0时区的时间. 使用时要转换为中国时间
 		Calendar calendertime = Calendar.getInstance();
 		calendertime.set(year, month, day, hourOfDay, minute);
 		
@@ -48,6 +48,8 @@ public class CVSReadUtils {
 		fxMetaData.setYear(year);
 		fxMetaData.setMonth(month);
 		fxMetaData.setDay(day);
+		fxMetaData.setHour(hourOfDay);
+		fxMetaData.setMinute(minute);
 		fxMetaData.setSdate(sdate);
 		fxMetaData.setStime(stime);
 		fxMetaData.setOpen(open);
@@ -64,8 +66,7 @@ public class CVSReadUtils {
 	}
 
 	public static void main(String[] args) {
-		retrieveOneLine("2014.09.08,00:00,7.9175,7.9182,7.9143,7.9167,887");
-
+		System.out.println(retrieveOneLine("2014.09.08,00:00,7.9175,7.9182,7.9143,7.9167,887"));
 	}
 
 }

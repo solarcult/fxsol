@@ -40,9 +40,9 @@ public class FxSpeicalDay {
 			result =  SpecialWeek_First_Day_Of_Week_Of_Month;
 		}else if((maxDayOfMonth - calendar.get(Calendar.DAY_OF_MONTH)) < 7){
 			result = SpecialWeek_Last_Day_Of_Week_Of_Month;
+		}else{
+			result = String.valueOf(numberOfWeek);
 		}
-		
-		if(result==null) result = String.valueOf(numberOfWeek);
 		
 		return result;
 	}
