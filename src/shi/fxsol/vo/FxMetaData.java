@@ -1,15 +1,16 @@
 package shi.fxsol.vo;
 
-import java.util.Date;
+import java.util.Calendar;
 
 public class FxMetaData {
 	
+	private long id;
 	//交易品种
 	private String name;
 	//时间框架 分钟计数 1440
 	private String timeframe;
 	
-	private Date datetime;
+	private Calendar datetime;
 	private int year;
 	private int month;
 	private int day;
@@ -45,10 +46,10 @@ public class FxMetaData {
 	public void setTimeframe(String timeframe) {
 		this.timeframe = timeframe;
 	}
-	public Date getDatetime() {
+	public Calendar getDatetime() {
 		return datetime;
 	}
-	public void setDatetime(Date datetime) {
+	public void setDatetime(Calendar datetime) {
 		this.datetime = datetime;
 	}
 	public int getYear() {
@@ -140,17 +141,6 @@ public class FxMetaData {
 	}
 	public void setMinute(int minute) {
 		this.minute = minute;
-	}
-	@Override
-	public String toString() {
-		return "FxMetaData [name=" + name + ", timeframe=" + timeframe
-				+ ", datetime=" + datetime + ", year=" + year + ", month="
-				+ month + ", day=" + day + ", hour=" + hour + ", minute="
-				+ minute + ", sdate=" + sdate + ", stime=" + stime + ", open="
-				+ open + ", high=" + high + ", low=" + low + ", close=" + close
-				+ ", volumn=" + volumn + ", weekofday=" + weekofday
-				+ ", dayOfWeekInMonth=" + dayOfWeekInMonth + ", specialweek="
-				+ specialweek + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -247,5 +237,23 @@ public class FxMetaData {
 		if (year != other.year)
 			return false;
 		return true;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	@Override
+	public String toString() {
+		return "FxMetaData [id=" + id + ", name=" + name + ", timeframe="
+				+ timeframe + ", datetime=" + datetime + ", year=" + year
+				+ ", month=" + month + ", day=" + day + ", hour=" + hour
+				+ ", minute=" + minute + ", sdate=" + sdate + ", stime="
+				+ stime + ", open=" + open + ", high=" + high + ", low=" + low
+				+ ", close=" + close + ", volumn=" + volumn + ", weekofday="
+				+ weekofday + ", dayOfWeekInMonth=" + dayOfWeekInMonth
+				+ ", specialweek=" + specialweek + "]";
 	}
 }

@@ -7,7 +7,7 @@ CREATE TABLE fxmetadata
   id bigserial NOT NULL,
   name text NOT NULL, -- 交易品种
   timeframe text NOT NULL, -- 时间框架 分钟计数 1440
-  datetime date,
+  datetime timestamp with time zone,
   year integer NOT NULL,
   month integer NOT NULL,
   day integer NOT NULL,

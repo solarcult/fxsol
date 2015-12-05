@@ -1,7 +1,9 @@
 package shi.fxsol.cvs;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.StringTokenizer;
+import java.util.TimeZone;
 
 import shi.fxsol.uitls.FxCalenderUtils;
 import shi.fxsol.vo.FxMetaData;
@@ -40,11 +42,13 @@ public class CSVReadUtils {
 		//volumn
 		int volumn = Integer.parseInt(st.nextToken());
 		
-		//此处应该注明是标准时间,即0时区的时间. 使用时要转换为中国时间
+		//TODO 此处应该注明是标准时间,即0时区的时间. 使用时要转换为中国时间
+//		TimeZone.setDefault(TimeZone.getTimeZone("GMT+0:00"));
+//		GregorianCalendar calendertime = new  GregorianCalendar(TimeZone.getTimeZone("GMT+00:00"));
 		Calendar calendertime = Calendar.getInstance();
-		calendertime.set(year, month, day, hourOfDay, minute);
+		calendertime.set(year, month, day, hourOfDay, minute,0);
 		
-		fxMetaData.setDatetime(calendertime.getTime());
+		fxMetaData.setDatetime(calendertime);
 		fxMetaData.setYear(year);
 		fxMetaData.setMonth(month);
 		fxMetaData.setDay(day);
@@ -67,6 +71,9 @@ public class CSVReadUtils {
 
 	public static void main(String[] args) {
 		System.out.println(retrieveOneLine("2014.09.08,00:00,7.9175,7.9182,7.9143,7.9167,887"));
+		GregorianCalendar c = new  GregorianCalendar(TimeZone.getTimeZone("GMT+0:00"));
+		System.out.println(c);
+		System.out.println(TimeZone.getTimeZone("GMT+0:00").getDisplayName());
 	}
 
 }

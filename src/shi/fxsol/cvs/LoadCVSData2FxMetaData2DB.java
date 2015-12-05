@@ -4,11 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FilenameFilter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.CharUtils;
 
+import shi.fxsol.db.FxMetaDataDaoImpl;
 import shi.fxsol.vo.FxMetaData;
 
 public class LoadCVSData2FxMetaData2DB {
@@ -24,6 +26,8 @@ public class LoadCVSData2FxMetaData2DB {
 		for(File csv : files){
 			try{
 				List<FxMetaData> fxMetaDatas = processOneCSVFile(csv);
+				
+				FxMetaDataDaoImpl.insertFxMetaDataList(fxMetaDatas);
 				
 			}catch(Exception e){
 				e.printStackTrace();
@@ -56,9 +60,10 @@ public class LoadCVSData2FxMetaData2DB {
 			//通过文件名解析出名称和时间框架
 			String fxname = filefullname.substring(0,fxnamestop);
 			String timeframe = filefullname.substring(timeframestart);
-			
+			BufferedReader bufferedReader = null;
 			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(csvfile));
+				
+				bufferedReader = new BufferedReader(new FileReader(csvfile));
 				String oneline = bufferedReader.readLine();
 				FxMetaData fxMetaData = CSVReadUtils.retrieveOneLine(oneline);
 				if(fxMetaData!=null){
@@ -68,6 +73,13 @@ public class LoadCVSData2FxMetaData2DB {
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
+			}finally{
+				if(bufferedReader!=null)
+					try {
+						bufferedReader.close();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 			}
 		}
 		
