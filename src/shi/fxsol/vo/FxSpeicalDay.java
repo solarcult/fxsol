@@ -1,5 +1,6 @@
 package shi.fxsol.vo;
 
+import java.net.URLDecoder;
 import java.util.Calendar;
 
 public class FxSpeicalDay {
@@ -62,5 +63,9 @@ public class FxSpeicalDay {
 				}
 			}
 		}
+		String c = "http://econoday.autochartist.com/ui/eiar.html?symbol=900746&eventType=HST&cc=US&timegranularity=5&chartstyle=AAD_ALIA_7IAAP9iYmL_Jysw_8jIyP_IyMj_AAAA_7KyAP8AAAAABUFyaWFsAAVISDptbQAKeXl5eS9NTS9kZAAGMC4wMDAw&css=https%3A%2F%2Fmaxcdn.bootstrapcdn.com%2Fbootswatch%2F3.3.4%2Fslate%2Fbootstrap.min.css&back_url=https%3A%2F%2Fcalendar.econoday.com%2Fbyshoweventfull.asp%3Ffid%3D467210%26cust%3D%26year%3D2015%26lid%3D0%26prev%3D%2Fbyweek.asp";
+		System.out.println(URLDecoder.decode(c));
+		String c2 = "http://econoday.autochartist.com/ui/eiar.html?symbol=900746&eventType=NAPMC&cc=US&timegranularity=5&chartstyle=AAD_ALIA_7IAAP9iYmL_Jysw_8jIyP_IyMj_AAAA_7KyAP8AAAAABUFyaWFsAAVISDptbQAKeXl5eS9NTS9kZAAGMC4wMDAw&css=https%3A%2F%2Fmaxcdn.bootstrapcdn.com%2Fbootswatch%2F3.3.4%2Fslate%2Fbootstrap.min.css&back_url=https%3A%2F%2Fcalendar.econoday.com%2Fbyshoweventfull.asp%3Ffid%3D467210%26cust%3D%26year%3D2015%26lid%3D0%26prev%3D%2Fbyweek.asp";
+		System.out.println(URLDecoder.decode(c2));
 	}
 }

@@ -3,12 +3,11 @@ package shi.fxsol.vo;
 
 public enum US {
 	we,are,living,in,america;
-	public enum Market_Moving_Indicator{
-		market,moving,indicator,is,cool,man;
+	
 		public static String USname = "United States";
 		public static String None = "None is nothing.";
 		
-		public static Event Consumer_Price_Index = new Event(
+		public static Event III_Consumer_Price_Index = new Event(
 				USname,
 				"Consumer Price Index", 
 				"The Consumer Price Index is a measure of the change in the average price level of a fixed basket of goods and services purchased by consumers. That is the index shows the change in price levels since the index base period, currently 1982-84 = 100. Monthly changes in the CPI represent the rate of inflation.\nThe consumer price index is available nationally by expenditure category and by commodity and service group for all urban consumers (CPI-U) and wage earners (CPI-W). All urban consumers are a more inclusive group, representing about 87 percent of the population. The CPI-U is the more widely quoted of the two, although cost-of-living contracts for unions and Social Security benefits are usually tied to the CPI-W, because it has a longer history. Monthly variations between the two are slight.\nThe CPI is also available by size of city, by region of the country, for cross-classifications of regions and population-size classes, and for many metropolitan areas. The regional and city CPIs are often used in local contracts.\nThe Bureau of Labor Statistics also produces a chain-weighted index called the Chained CPI. This measures a variable basket of goods and services whereas the regular CPI-U and CPI-W measure a fixed basket of goods and services. The Chained CPI is similar to the personal consumption expenditure price index that is closely monitored by the Federal Reserve Board.", 
@@ -20,7 +19,7 @@ public enum US {
 				"Around mid-month.", 
 				"Data are for one month prior to release month. Data for June are released in July.", 
 				"No");
-		public static Event Durable_Goods_Orders = new Event(
+		public static Event III_Durable_Goods_Orders = new Event(
 				USname, 
 				"Durable Goods Orders", 
 				"Durable goods orders reflect the new orders placed with domestic manufacturers for immediate and future delivery of factory hard goods. The first release, the advance, provides an early estimate of durable goods orders. About two weeks later, more complete and revised data are available in the factory orders report. The data for the previous month are usually revised a second time upon the release of the new month's data.\nDurable goods orders are available nationally by both industry and market categories. A new order is accompanied by a legally binding agreement to purchase for immediate or future delivery. Advance durable goods orders no longer include data on semiconductors since semiconductor manufacturers stopped releasing this information to the Census Bureau.\nThe advance durable goods report also contains information on shipments, unfilled orders and inventories. Shipments represent deliveries made, valued at net selling price after discounts and allowances, excluding freight charges and excise taxes. Semiconductor data are available for shipments and inventories. Unfilled orders are those received but not yet delivered.\nIn 2001, the Census Bureau shifted from the standard industrial classification (SIC) system to the North American Industrial Classification System (NAICS). This caused some realignment of major industry classifications. Given the significant revisions incurred, the historical data now begin in 1992.", 
@@ -32,7 +31,7 @@ public enum US {
 				"Usually during the fourth week of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes");
-		public static Event Employment_Situation = new Event(
+		public static Event IIIII_Employment_Situation = new Event(
 				USname, 
 				"Employment Situation", 
 				"The employment situation is a set of labor market indicators based on two separate surveys in this one report. The unemployment rate equals the number of unemployed persons divided by the total number of persons in the labor force, which comes from a survey of 60,000 households (this is called the household survey). Workers are only counted once, no matter how many jobs they have, or whether they are only working part-time. In order to be counted as unemployed, one must be actively looking for work. Other commonly known figures from the Household Survey include the labor supply and discouraged workers.\nThe Establishment Survey-a survey of over 557,000 worksites- provides additional indicators. Nonfarm payroll employment is the most popular and well-known indicator from this survey. Business establishments in the nonfarm sector report the number of workers currently on their payrolls. Double counting occurs when individuals hold more than one job. Workers on strike during the relevant week are not included in the figures.\nDue to sizeable swings in payroll employment during 2010 for hiring and then layoffs of temporary workers for the decentennial Census, analysts started giving essentially equal attention to private nonfarm payrolls as to overall payrolls. This added focus continued even after temporary Census worker issues were no longer a problem as the long-duration recession caused state & local governments to cut their workforce even as the private sector began to rehire during recovery.\nThe average workweek is a leading indicator of employment. Businesses tend to adjust total hours worked by increasing or decreasing the workweek before hiring someone new or laying someone off. These figures come from the Establishment Survey.\nAverage hourly earnings are monthly payroll figures reported before deductions for taxes, social insurance and fringe benefits. They include pay for overtime, holidays, vacation and sick leave. These figures come from the Establishment Survey.",
@@ -44,7 +43,7 @@ public enum US {
 				"Usually the first Friday day of the month. However, the official rule is that estimates for a given reference month are typically released on the third Friday after the conclusion of the reference week; i.e., the week which includes the 12th of the month. This occasionally results in a release date on the second Friday of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes. Monthly revisions for payroll data go back two months and annual revisions are released in February with January data.");
-		public static Event Existing_Home_Sales = new Event(
+		public static Event III_Existing_Home_Sales = new Event(
 				USname, 
 				"Existing Home Sales", 
 				"Existing home sales tally the number of previously constructed homes, condominiums and co-ops in which a sale closed during the month. Existing homes (also known as home resales) account for a larger share of the market than new homes and indicate housing market trends. (National Association of Realtors)", 
@@ -56,40 +55,17 @@ public enum US {
 				"On or about the 25th of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes.");
+		/*
 		public static Event Fed_Chair_Press_Conference = new Event(
 				USname, 
 				"Fed Chair Press Conference", 
 				"The Fed announced on March 24, 2011 that then Fed Chair Ben Bernanke would hold press briefings four times a year to explain the FOMC's latest quarterly economic projections. Additionally, the purpose of the briefings is to provide additional context for the FOMC's policy decisions and to allow for Q&A with the press. According to the Fed, the 'introduction of regular press briefings is intended to further enhance the clarity and timeliness of the Federal Reserve's monetary policy communication.' As of March 20, 2013, the press briefing is held at 2:30 p.m. ET on the days of FOMC statements in which quarterly projections are released. These FOMC statement dates are designated as the ones released in the final month of each quarter��March, June, September, and December. The policy statement is released at 2:00 p.m. ET after the conclusion of every FOMC meeting regardless of whether there are forecasts or not. This schedule started March 20, 2013. Fed Chair Janet Yellen continues this practice of holding the quarterly chair press conference.", 
-				"The Fed��s meeting statement and economic projections can move financial markets. However, the Fed��s meeting statement��which indicates any changes in monetary policy��typically is very concise and lacking in detail. However, the Fed now releases its economic forecasts four times a year. As of March 20, 2013, the forecasts are released at the same time as the FOMC statement during the months of March, June, September, and December. These are the months that the chair holds a press conference to explain the forecasts and other policy issues. The chair��s press conference allows for the financial markets and public in general to learn more about why and how the monetary policy decision was made and to learn more about FOMC views on the direction of the economy��including real growth, inflation, unemployment, expected timing of changes in the fed funds rate, and expected levels of the fed funds rate in the near term.", 
+				"The Fed's meeting statement and economic projections can move financial markets. However, the Fed��s meeting statement��which indicates any changes in monetary policy��typically is very concise and lacking in detail. However, the Fed now releases its economic forecasts four times a year. As of March 20, 2013, the forecasts are released at the same time as the FOMC statement during the months of March, June, September, and December. These are the months that the chair holds a press conference to explain the forecasts and other policy issues. The chair��s press conference allows for the financial markets and public in general to learn more about why and how the monetary policy decision was made and to learn more about FOMC views on the direction of the economy��including real growth, inflation, unemployment, expected timing of changes in the fed funds rate, and expected levels of the fed funds rate in the near term.", 
 				None, 
 				None, 
 				"Quarterly", 
 				"Federal Reserve Board of Governors", 
 				"After FOMC meetings in March, June, September, and December, 2:30 p.m. ET", 
-				"Not applicable.", 
-				"Not applicable.");
-		public static Event FOMC_Forecasts = new Event(
-				USname, 
-				"FOMC Forecasts", 
-				"The Fed now releases economic projections four times a year (March, June, September, and December). Traditionally, the Fed forecasts covered GDP, the PCE price index, and the civilian unemployment rate. However, the forecast report additionally now includes forecasts for the appropriate timing of the next change in the fed funds rate and the expected fed funds rate at the end of the next two years. As of March 20, 2013, the forecasts are released at the same time as the FOMC statement which is 2:00 p.m. ET and 30 minutes prior to the Fed chairman's press conference which addresses the forecasts and Fed policy in general. The forecasts are a composite of individual forecasts by each Fed governor and each District president and cover two to three years out on an annual basis. The GDP, inflation, and unemployment numbers are published as a 'central tendency' and also as a range. The central tendency is an average of the forecasts after the highest and lowest forecasts are removed. The range shows the highest and lowest forecasts for these indicators.", 
-				None, 
-				None, 
-				None, 
-				"Quarterly", 
-				"Federal Reserve Board of Governors", 
-				"Forecasts are released at about 2:00 p.m. ET on days of the release of FOMC policy statements during the months of March, June, September, and December.", 
-				None, 
-				"No");
-		public static Event FOMC_Meeting_Announcement = new Event(
-				USname, 
-				"FOMC Meeting Announcement", 
-				"The Federal Open Market Committee (FOMC) is the policy-making arm of the Federal Reserve. It determines short-term interest rates in the U.S. when it decides the overnight rate that banks pay each other for borrowing reserves when a bank has a shortfall in required reserves. This rate is the fed funds rate. The FOMC also determines whether the Fed should add or subtract liquidity in credit markets separately from that related to changes in the fed funds rate. The Fed announces its policy decision (typically whether to change the fed funds target rate) at the end of each FOMC meeting. This is the FOMC announcement. The announcement also includes brief comments on the FOMC's views on the economy and how many FOMC members voted for and how many voted against the policy decision. Since the last recession, the statement also includes information on Fed purchases of assets, so-called 'quantitative easing', which affects longer-term interest rates. Also, a key part of the announcement is guidance on potential changes in policy rates or asset purchases.", 
-				"The Fed determines interest rate policy at FOMC meetings. These occur roughly every six weeks and are the single most influential event for the markets. For weeks in advance, market participants speculate about the possibility of an interest rate change at these meetings. If the outcome is different from expectations, the impact on the markets can be dramatic and far-reaching.\nThe interest rate set by the Fed, the federal funds rate, serves as a benchmark for all other rates. A change in the fed funds rate, the lending rate banks charge each other for the use of overnight funds, translates directly through to all other interest rates from Treasury bonds to mortgage loans. It also changes the dynamics of competition for investor dollars. When bonds yield 5 percent, they will attract more money away from stocks than when they only yield 3 percent.\nThe level of interest rates affects the economy. Higher interest rates tend to slow economic activity; lower interest rates stimulate economic activity. Either way, interest rates influence the sales environment. In the consumer sector, fewer homes or cars will be purchased when interest rates rise. Furthermore, interest rate costs are a significant factor for many businesses, particularly for companies with high debt loads or who have to finance high inventory levels. This interest cost has a direct impact on corporate profits. The bottom line is that higher interest rates are bearish for the stock market, while lower interest rates are bullish.\nThe Fed also began quantitative easing during the past recession and continues during the recovery. Fed asset purchases affect longer-term interest rates and, in turn, other financial sectors and the economy.\nEconoday lists a separate 'FOMC Meeting Begins' only for the first day of two-day policy meetings. Otherwise, 'FOMC Meeting Announcement' serves the same purpose for one-day FOMC meetings since the announcement takes place just after the meeting concludes.", 
-				None, 
-				None, 
-				"Eight times a year.", 
-				"Federal Reserve Board of Governors", 
-				"FOMC meetings are scheduled for eight times a year, typically for late January, mid-March, late April, mid-June, late July, mid-September, late October, and mid-December.", 
 				"Not applicable.", 
 				"Not applicable.");
 		public static Event FOMC_Minutes = new Event(
@@ -104,7 +80,32 @@ public enum US {
 				"The FOMC minutes are released three weeks to the day after the conclusion of each FOMC meeting. FOMC meetings are scheduled for eight times a year, typically for late January, mid-March, late April, mid-June, late July, mid-September, late October, and mid-December.", 
 				"Not applicable.", 
 				"Not applicable.");
-		public static Event GDP = new Event(
+		*/
+		public static Event FOMC_Forecasts = new Event(
+				USname, 
+				"FOMC Forecasts", 
+				"The Fed now releases economic projections four times a year (March, June, September, and December). Traditionally, the Fed forecasts covered GDP, the PCE price index, and the civilian unemployment rate. However, the forecast report additionally now includes forecasts for the appropriate timing of the next change in the fed funds rate and the expected fed funds rate at the end of the next two years. As of March 20, 2013, the forecasts are released at the same time as the FOMC statement which is 2:00 p.m. ET and 30 minutes prior to the Fed chairman's press conference which addresses the forecasts and Fed policy in general. The forecasts are a composite of individual forecasts by each Fed governor and each District president and cover two to three years out on an annual basis. The GDP, inflation, and unemployment numbers are published as a 'central tendency' and also as a range. The central tendency is an average of the forecasts after the highest and lowest forecasts are removed. The range shows the highest and lowest forecasts for these indicators.", 
+				None, 
+				None, 
+				None, 
+				"Quarterly", 
+				"Federal Reserve Board of Governors", 
+				"Forecasts are released at about 2:00 p.m. ET on days of the release of FOMC policy statements during the months of March, June, September, and December.", 
+				None, 
+				"No");
+		public static Event III_FOMC_Meeting_Announcement = new Event(
+				USname, 
+				"FOMC Meeting Announcement", 
+				"The Federal Open Market Committee (FOMC) is the policy-making arm of the Federal Reserve. It determines short-term interest rates in the U.S. when it decides the overnight rate that banks pay each other for borrowing reserves when a bank has a shortfall in required reserves. This rate is the fed funds rate. The FOMC also determines whether the Fed should add or subtract liquidity in credit markets separately from that related to changes in the fed funds rate. The Fed announces its policy decision (typically whether to change the fed funds target rate) at the end of each FOMC meeting. This is the FOMC announcement. The announcement also includes brief comments on the FOMC's views on the economy and how many FOMC members voted for and how many voted against the policy decision. Since the last recession, the statement also includes information on Fed purchases of assets, so-called 'quantitative easing', which affects longer-term interest rates. Also, a key part of the announcement is guidance on potential changes in policy rates or asset purchases.", 
+				"The Fed determines interest rate policy at FOMC meetings. These occur roughly every six weeks and are the single most influential event for the markets. For weeks in advance, market participants speculate about the possibility of an interest rate change at these meetings. If the outcome is different from expectations, the impact on the markets can be dramatic and far-reaching.\nThe interest rate set by the Fed, the federal funds rate, serves as a benchmark for all other rates. A change in the fed funds rate, the lending rate banks charge each other for the use of overnight funds, translates directly through to all other interest rates from Treasury bonds to mortgage loans. It also changes the dynamics of competition for investor dollars. When bonds yield 5 percent, they will attract more money away from stocks than when they only yield 3 percent.\nThe level of interest rates affects the economy. Higher interest rates tend to slow economic activity; lower interest rates stimulate economic activity. Either way, interest rates influence the sales environment. In the consumer sector, fewer homes or cars will be purchased when interest rates rise. Furthermore, interest rate costs are a significant factor for many businesses, particularly for companies with high debt loads or who have to finance high inventory levels. This interest cost has a direct impact on corporate profits. The bottom line is that higher interest rates are bearish for the stock market, while lower interest rates are bullish.\nThe Fed also began quantitative easing during the past recession and continues during the recovery. Fed asset purchases affect longer-term interest rates and, in turn, other financial sectors and the economy.\nEconoday lists a separate 'FOMC Meeting Begins' only for the first day of two-day policy meetings. Otherwise, 'FOMC Meeting Announcement' serves the same purpose for one-day FOMC meetings since the announcement takes place just after the meeting concludes.", 
+				None, 
+				None, 
+				"Eight times a year.", 
+				"Federal Reserve Board of Governors", 
+				"FOMC meetings are scheduled for eight times a year, typically for late January, mid-March, late April, mid-June, late July, mid-September, late October, and mid-December.", 
+				"Not applicable.", 
+				"Not applicable.");
+		public static Event III_GDP = new Event(
 				USname, 
 				"GDP", 
 				"GDP represents the total value of the country's production during the period and consists of the purchases of domestically-produced goods and services by individuals, businesses, foreigners and government entities. Data are available in nominal and real (inflation-adjusted) dollars, as well as in index form. Economists and market players always monitor the real growth rates generated by the GDP quantity index or the real dollar value. The quantity index measures inflation-adjusted activity, but we are more accustomed to looking at dollar values.\nIndividuals purchase personal consumption expenditures -- durable goods (such as furniture and cars), nondurable goods (such as clothing and food) and services (such as banking, education and transportation).\nPrivate housing purchases are classified as residential investment. Businesses invest in nonresidential structures, durable equipment and computer software. Inventories at all stages of production are counted as investment. Only inventory changes, not levels, are added to GDP.\nNet exports equal the sum of exports less imports. Exports are the purchases by foreigners of goods and services produced in the United States. Imports represent domestic purchases of foreign-produced goods and services and must be deducted from the calculation of GDP.\nGovernment purchases of goods and services are the compensation of government employees and purchases from businesses and abroad. Data show the portion attributed to consumption and investment. Government outlays for transfer payments or interest payments are not included in GDP.\nThe GDP price index is a comprehensive indicator of inflation. It is typically lower than the consumer price index because investment goods (which are in the GDP price index but not the CPI) tend have lower rates of inflation than consumer goods and services.", 
@@ -116,7 +117,7 @@ public enum US {
 				"Usually during the fourth week of the month.", 
 				"Data are for the prior quarter. Data released in April are for the first quarter. Each quarter's data are revised in each of the following two months after the initial release.", 
 				"Yes.");
-		public static Event Housing_Starts = new Event(
+		public static Event III_Housing_Starts = new Event(
 				USname, 
 				"Housing Starts", 
 				"A housing start is registered at the start of construction of a new building intended primarily as a residential building. The start of construction is defined as the beginning of excavation of the foundation for the building.", 
@@ -128,7 +129,7 @@ public enum US {
 				"Usually during the third week of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes");
-		public static Event Industrial_Production = new Event(
+		public static Event III_Industrial_Production = new Event(
 				USname, 
 				"Industrial Production", 
 				"The Federal Reserve's monthly index of industrial production and the related capacity indexes and capacity utilization rates cover manufacturing, mining, and electric and gas utilities. The industrial sector, together with construction, accounts for the bulk of the variation in national output over the course of the business cycle. The production index measures real output and is expressed as a percentage of real output in a base year, currently 2007. The capacity index, which is an estimate of sustainable potential output, is also expressed as a percentage of actual output in 2007. The rate of capacity utilization equals the seasonally adjusted output index expressed as a percentage of the related capacity index.\nThe index of industrial production is available nationally by market and industry groupings. The major groupings are comprised of final products (such as consumer goods, business equipment and construction supplies), intermediate products and materials. The industry groupings are manufacturing (further subdivided into durable and nondurable goods), mining and utilities. The capacity utilization rate -- reflecting the resource utilization of the nation's output facilities -- is available for the same market and industry groupings.\nIndustrial production was also revised to NAICS (North American Industry Classification System) in the early 2000s. Unlike other economic series that lost much historical data prior to 1992, the Federal Reserve Board was able to reconstruction historical data that go back more than 30 years.", 
@@ -140,7 +141,7 @@ public enum US {
 				"Usually mid- month.", 
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes.");
-		public static Event International_Trade = new Event(
+		public static Event III_International_Trade = new Event(
 				USname, 
 				"International Trade", 
 				"International trade is composed of merchandise (tangible goods) and services. It is available nationally by export, import and trade balance. Merchandise trade is available by export, import and trade balance for six principal end-use commodity categories and for more than one hundred principal Standard International Trade Classification (SITC) system commodity groupings. Data are also available for 36 countries and geographic regions. Detailed information is reported on oil and motor vehicle imports. Services trade is available by export, import and trade balance for seven principal end-use categories.", 
@@ -164,7 +165,7 @@ public enum US {
 				"Last week of the month", 
 				"Data are for two months back. Data for June are released in August.", 
 				"yes");
-		public static Event ISM_Mfg_Index = new Event(
+		public static Event III_ISM_Mfg_Index = new Event(
 				USname, 
 				"ISM Mfg Index", 
 				"The ISM manufacturing composite index is a diffusion index calculated from five of the eleven sub-components of a monthly survey of purchasing managers at roughly 300 manufacturing firms nationwide. The survey queries purchasing managers about the general direction of production, new orders, order backlogs, their own inventories, customer inventories, employment, supplier deliveries, exports, imports, and prices. The five components of the composite index are new orders, production, employment, supplier deliveries, and inventories (their own, not customer inventories). The five components are equally weighted. The questions are qualitative rather than quantitative; that is, they ask about the general direction rather than the specific level of activity. Each question is transformed into a diffusion index which is calculated by adding the percentage of positive responses to one-half of the unchanged responses.", 
@@ -176,7 +177,7 @@ public enum US {
 				"The first business day of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
 				"No.");
-		public static Event Jobless_Claims = new Event(
+		public static Event III_Jobless_Claims = new Event(
 				USname, 
 				"Jobless Claims", 
 				"New unemployment claims are compiled weekly to show the number of individuals who filed for unemployment insurance for the first time. An increasing (decreasing) trend suggests a deteriorating (improving) labor market. The four-week moving average of new claims smooths out weekly volatility.", 
@@ -188,7 +189,7 @@ public enum US {
 				"Thursdays.", 
 				"Week-ending Saturday before the release.", 
 				"Yes.");
-		public static Event New_Home_Sales = new Event(
+		public static Event III_New_Home_Sales = new Event(
 				USname, 
 				"New Home Sales", 
 				"New home sales measure the number of newly constructed homes with a committed sale during the month. The level of new home sales indicates housing market trends and, in turn, economic momentum and consumer purchases of furniture and appliances.", 
@@ -200,7 +201,7 @@ public enum US {
 				"Near the end of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes.");
-		public static Event Personal_Income_and_Outlays = new Event(
+		public static Event III_Personal_Income_and_Outlays = new Event(
 				USname, 
 				"Personal Income and Outlays", 
 				"Personal income represents the income that households receive from all sources including wages and salaries, fringe benefits such as employer contributions of private pension plans, proprietors' income, income from rent, dividends and interest and transfer payments such as Social Security and unemployment compensation. Personal contributions for social insurance are subtracted from personal income.\nPersonal consumption expenditures are the major portion of personal outlays, which also include personal interest payments and transfer payments. Personal consumption expenditures are divided into durable goods, nondurable goods and services. These figures are the monthly analogues to the quarterly consumption expenditures in the GDP report, available in nominal and real (inflation-adjusted) dollars. Economic performance is more appropriately measured after the effects of inflation are removed.\nEach month, the Bureau of Economic Analysis also compiles the personal consumption expenditure price index, also known as the PCE price index. This inflation index measures a basket of goods and services that is updated annually in contrast to the CPI, which measures a fixed basket. ", 
@@ -236,7 +237,7 @@ public enum US {
 				"Around mid-month.", 
 				"Data are for one month prior to release month. Data for June are released in July.", 
 				"Yes.");
-		public static Event Producer_Price_Index = new Event(
+		public static Event III_Producer_Price_Index = new Event(
 				USname, 
 				"Producer Price Index", 
 				"The Producer Price Index (PPI) of the Bureau of Labor Statistics (BLS) is a family of indexes that measure the average change over time in the prices received by domestic producers of goods and services. PPIs measure price change from the perspective of the seller. Effective with the January 2014 PPI data release in February 2014, BLS transitioned from the Stage of Processing (SOP) to the Final Demand-Intermediate Demand (FD-ID) aggregation system. The headline PPI (for Final Demand) measures price changes for goods, services, and construction sold to final demand: personal consumption, capital investment, government purchases, and exports.", 
@@ -248,7 +249,7 @@ public enum US {
 				"Around mid-month.", 
 				"Data are for one month prior to release month. Data for June are released in July.", 
 				"Yes.");
-		public static Event Retail_Sales = new Event(
+		public static Event III_Retail_Sales = new Event(
 				USname, 
 				"Retail Sales", 
 				"Retail sales measure the total receipts at stores that sell merchandise and related services to final consumers. Sales are by retail and food services stores. Data are collected from the Monthly Retail Trade Survey conducted by the U.S. Bureau of the Census. Essentially, retail sales cover the durables and nondurables portions of consumer spending. Consumer spending typically accounts for about two-thirds of GDP and is therefore a key element in economic growth.", 
@@ -260,5 +261,65 @@ public enum US {
 				"Mid-month.", 
 				"Data are for the previous month. Data for June are released in July", 
 				"Yes.");
-	}
+		
+		public static Event II_Consumer_Confidence = new Event(
+				USname, 
+				"Consumer Confidence", 
+				"The Conference Board compiles a survey of consumer attitudes on the economy. The headline Consumer Confidence Index is based on consumers' perceptions of current business and employment conditions, as well as their expectations for six months hence regarding business conditions, employment, and income. Three thousand households across the country are surveyed each month.\nThe Conference Board changed its polling company in 2010. The current polling company is Nielsen Co. with the former being TNS Inc. The switchover reference month for the new data is November 2010. Because of the change in the polling service (even though the questions in the questionnaire are the same) the data are not completely consistent and November 2010 should be considered a break in the series. In general, while the level of consumer confidence is associated with consumer spending, the two do not move in tandem each and every month.", 
+				"The pattern in consumer attitudes can be a key influence on stock and bond markets. Consumer spending drives two-thirds of the economy and if the consumer is not confident, the consumer will not be willing to pull out the big bucks. Confidence impacts consumer spending which affects economic growth. For stocks, strong economic growth translates to healthy corporate profits and higher stock prices. For bonds, the focus is whether economic growth goes overboard and leads to inflation. Ideally, the economy walks that fine line between strong growth and excessive (inflationary) growth. This balance was achieved through much of the nineties. For this reason alone, investors in the stock and bond markets enjoyed huge gains during the bull market of the 1990s. Consumer confidence did shift down in tandem with the equity market between 2000 and 2002 and then recovered in 2003 and 2004. In 2008 and 2009, the credit crunch and past recession led confidence downward with consumer spending contracting in tandem. More recently during the economic recovery, consumer confidence has edged back up but has been outpaced by improvement in spending.\nSince consumer spending accounts for such a large portion of the economy, the markets are always eager to know what consumers are up to and how they might behave in the near future. The more confident consumers are about the economy and their own personal finances, the more likely they are to spend. It's easy to see how this index of consumer attitudes gives insight to the direction of the economy. Just note that changes in consumer confidence and retail sales don't move in tandem month by month.", 
+				None, 
+				None, 
+				"Monthly", 
+				"The Conference Board", 
+				"Last week of the month", 
+				"Data are for same month as the release month. Data for June are released in June.", 
+				"Yes");
+		public static Event II_Consumer_Sentiment = new Event(
+				USname, 
+				"Consumer Sentiment", 
+				"The University of Michigan's Consumer Survey Center questions 500 households each month on their financial conditions and attitudes about the economy. Consumer sentiment is directly related to the strength of consumer spending. Consumer confidence and consumer sentiment are two ways of talking about consumer attitudes. Among economic reports, consumer sentiment refers to the Michigan survey while consumer confidence refers to The Conference Board's survey. Preliminary estimates for a month are released at mid-month. Final estimates for a month are released near the end of the month.", 
+				"The pattern in consumer attitudes and spending is often the foremost influence on stock and bond markets. For stocks, strong economic growth translates to healthy corporate profits and higher stock prices. For bonds, the focus is whether economic growth goes overboard and leads to inflation. Ideally, the economy walks that fine line between strong growth and excessive (inflationary) growth. This balance was achieved through much of the nineties. For this reason alone, investors in the stock and bond markets enjoyed huge gains during the bull market of the 1990s. Consumer confidence did shift down in tandem with the equity market between 2000 and 2002 and then recovered in 2003 and 2004. More recently, the credit crunch and surge in gasoline prices led confidence downward in 2007. Despite a drop in gasoline prices, 2008 saw sentiment near record lows due to recession, a precipitous fall in stock prices, and fragile credit markets. However, consumer sentiment helped to confirm the easing of recession during 2009 as this index slowly rose from earlier lows. One should be aware that this report is released to private subscribers several minutes prior to release to the media. This may account for occasional market activity just prior to public release.\nConsumer spending accounts for more than two-thirds of the economy, so the markets are always dying to know what consumers are up to and how they might behave in the near future. The more confident consumers are about the economy and their own personal finances, the more likely they are to spend. With this in mind, it's easy to see how this index of consumer attitudes gives insight to the direction of the economy. Just note that changes in consumer confidence and retail sales don't move in tandem month by month.", 
+				None, 
+				None, 
+				"Monthly", 
+				"The Institute for Social Research (ISR) of the University of Michigan.", 
+				"Twice monthly. Preliminary estimates for a month are released at mid-month. Final estimates for a month are released near the end of the month. ", 
+				"Data are for the same month as the release month. Data for June are released in June. ", 
+				"Yes");
+		public static Event II_EIA_Petroleum_Status_Report = new Event(
+				USname, 
+				"EIA Petroleum Status Report", 
+				"The Energy Information Administration (EIA) provides weekly information on petroleum inventories in the U.S., whether produced here or abroad. The level of inventories helps determine prices for petroleum products. ", 
+				"Petroleum product prices are determined by supply and demand - just like any other good and service. During periods of strong economic growth, one would expect demand to be robust. If inventories are low, this will lead to increases in crude oil prices - or price increases for a wide variety of petroleum products such as gasoline or heating oil. If inventories are high and rising in a period of strong demand, prices may not need to increase at all, or as much. During a period of sluggish economic activity, demand for crude oil may not be as strong. If inventories are rising, this may push down oil prices.\nCrude oil is an important commodity in the global market. Prices fluctuate depending on supply and demand conditions in the world. Since oil is such an important part of the economy, it can also help determine the direction of inflation. In the U.S., consumer prices have moderated whenever oil prices have fallen, but have accelerated when oil prices have risen.", 
+				None, 
+				None, 
+				"Weekly", 
+				"Energy Information Administration (EIA), U.S. Department of Energy. ", 
+				"Wednesdays, except on federal holidays. ", 
+				"Each weekly report has data for the week ending the previous Friday. ", 
+				"No.");
+		public static Event I_Leading_Indicators = new Event(
+				USname, 
+				"Leading Indicators", 
+				"A composite index of ten economic indicators that should lead overall economic activity. This indicator was initially compiled by the Commerce Department but is now compiled and produced by The Conference Board. It has been revised many times in the past 30 years -- particularly when it has not done a good job of predicting turning points. ", 
+				"Investors need to keep their fingers on the pulse of the economy because it dictates how various types of investments will perform. By tracking economic data such as the index of leading indicators, investors will know what the economic backdrop is for the various markets. The stock market likes to see healthy economic growth because that translates to higher corporate profits. The bond market prefers less rapid growth and is extremely sensitive to whether the economy is growing too quickly -- and causing potential inflationary pressures. The index of leading indicators is designed to predict turning points in the economy -- such as recessions and recoveries. More specifically, it was designed to lead the index of coincident indicators, also now published by The Conference Board. Investors like to see composite indexes because they tell an easy story, although they are not always as useful as they promise. The majority of the components of the leading indicators have been reported earlier in the month so that the composite index doesn't necessarily reveal new information about the economy. Bond investors tend to be less interested in this index than equity investors. Also, the non-financial media tends to give this index more press than it deserves.", 
+				None, 
+				None, 
+				"Monthly", 
+				"The Conference Board.", 
+				"Third week of the month.", 
+				"Data are for the previous month. Data for June are released in July. ", 
+				"Yes");
+		public static Event I_MBA_Mortgage_Applications = new Event(
+				USname, 
+				"MBA Mortgage Applications", 
+				"The Mortgage Bankers' Association compiles various mortgage loan indexes. The purchase applications index measures applications at mortgage lenders. This is a leading indicator for single-family home sales and housing construction. ", 
+				"This provides a gauge of not only the demand for housing, but economic momentum. People have to be feeling pretty comfortable and confident in their own financial position to buy a house. Furthermore, this narrow piece of data has a powerful multiplier effect through the economy, and therefore across the markets and your investments. By tracking economic data such as the Mortgage Bankers Association purchase applications, investors can gain specific investment ideas as well as broad guidance for managing a portfolio.\nEach time the construction of a new home begins, it translates to more construction jobs, and income which will be pumped back into the economy. Once a home is sold, it generates revenues for the home builder and the realtor. It brings a myriad of consumption opportunities for the buyer. Refrigerators, washers, dryers and furniture are just a few items new home buyers might purchase. The economic 'ripple effect' can be substantial especially when you think a hundred thousand new households around the country are doing this every month.\nSince the economic backdrop is the most pervasive influence on financial markets, housing construction has a direct bearing on stocks, bonds and commodities. In a more specific sense, trends in the MBA purchase applications index carry valuable clues for the stocks of home builders, mortgage lenders and home furnishings companies.", 
+				None, 
+				None, 
+				"Weekly", 
+				"Mortgage Bankers Association", 
+				"Wednesdays", 
+				"Week-ending Friday before the release.", 
+				"No");
 }
