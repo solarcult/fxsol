@@ -1,13 +1,13 @@
-package shi.fxsol.cvs;
+package shi.fxsol.file;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.StringTokenizer;
 import java.util.TimeZone;
 
+import shi.fxsol.domain.FxMetaData;
+import shi.fxsol.domain.FxSpeicalDay;
 import shi.fxsol.uitls.FxCalenderUtils;
-import shi.fxsol.vo.FxMetaData;
-import shi.fxsol.vo.FxSpeicalDay;
 
 public class CSVReadUtils {
 	
@@ -15,7 +15,10 @@ public class CSVReadUtils {
 		FxMetaData fxMetaData = new FxMetaData();
 		StringTokenizer st = new StringTokenizer(line, ",");
 		
-		if(st.countTokens() != 7) return null;
+		if(st.countTokens() != 7){
+			System.out.println("ERROR: " + line);
+			return null;
+		}
 		
 		//解析日期
 		String sdate = st.nextToken();
@@ -42,9 +45,6 @@ public class CSVReadUtils {
 		//volumn
 		int volumn = Integer.parseInt(st.nextToken());
 		
-		//TODO 此处应该注明是标准时间,即0时区的时间. 使用时要转换为中国时间
-//		TimeZone.setDefault(TimeZone.getTimeZone("GMT+0:00"));
-//		GregorianCalendar calendertime = new  GregorianCalendar(TimeZone.getTimeZone("GMT+00:00"));
 		Calendar calendertime = Calendar.getInstance();
 		calendertime.set(year, month, day, hourOfDay, minute,0);
 		

@@ -1,4 +1,4 @@
-package shi.fxsol.vo;
+package shi.fxsol.domain;
 
 import java.net.URLDecoder;
 import java.util.Calendar;

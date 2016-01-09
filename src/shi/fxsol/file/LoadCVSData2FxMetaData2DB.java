@@ -1,22 +1,20 @@
-package shi.fxsol.cvs;
+package shi.fxsol.file;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FilenameFilter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.CharUtils;
 
 import shi.fxsol.db.FxMetaDataDaoImpl;
-import shi.fxsol.vo.FxMetaData;
+import shi.fxsol.domain.FxMetaData;
 
 public class LoadCVSData2FxMetaData2DB {
 
 	public static void loadFoler2DB(File folder){
-//		File folder = new File(foldername);
 		File[] files = folder.listFiles(new FilenameFilter() {
 			@Override
 			public boolean accept(File dir, String name) {
@@ -24,6 +22,7 @@ public class LoadCVSData2FxMetaData2DB {
 			}
 		});
 		for(File csv : files){
+			System.out.println("Process file: " + csv.getName());
 			try{
 				List<FxMetaData> fxMetaDatas = processOneCSVFile(csv);
 				
@@ -74,10 +73,11 @@ public class LoadCVSData2FxMetaData2DB {
 							fxMetaData.setTimeframe(timeframe);
 							fxMetaDatas.add(fxMetaData);
 						}
-						oneline = bufferedReader.readLine();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
+					
+					oneline = bufferedReader.readLine();
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

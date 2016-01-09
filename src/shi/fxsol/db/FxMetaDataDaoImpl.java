@@ -10,8 +10,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import shi.fxsol.cvs.CSVReadUtils;
-import shi.fxsol.vo.FxMetaData;
+import shi.fxsol.domain.FxMetaData;
 
 public class FxMetaDataDaoImpl {
 	
@@ -113,7 +112,7 @@ public class FxMetaDataDaoImpl {
 		}
 	}
 	
-	public static List<FxMetaData> queryFxMetaDatas4nameXtimeframe(String fxname,String fxtimeframe,int lastNmonth){
+	public static List<FxMetaData> listFxMetaDatas4nameXtimeframe(String fxname,String fxtimeframe,int lastNmonth){
 		List<FxMetaData> fxMetaDatas = new ArrayList<FxMetaData>();
 		
 		if(lastNmonth<=0){
@@ -145,7 +144,6 @@ public class FxMetaDataDaoImpl {
 			ResultSet resultSet = preStatement.executeQuery();
 			while(resultSet.next())
 			{
-				long id = resultSet.getLong(1);
 				String name = resultSet.getString(2);
 				String timeframe = resultSet.getString(3);
 				
@@ -173,7 +171,6 @@ public class FxMetaDataDaoImpl {
 		        
 		        FxMetaData fxMetaData = new FxMetaData();
 		        
-		        fxMetaData.setId(id);
 		        fxMetaData.setName(name);
 		        fxMetaData.setTimeframe(timeframe);
 		        fxMetaData.setDatetime(datetime);
@@ -231,7 +228,7 @@ public class FxMetaDataDaoImpl {
 		
 		insertFxMetaDataList(fxMetaDatas);
 		*/
-		for(FxMetaData fx : queryFxMetaDatas4nameXtimeframe("Me", "60", 24)){
+		for(FxMetaData fx : listFxMetaDatas4nameXtimeframe("Me", "60", 24)){
 			System.out.println(fx);
 		}
 		

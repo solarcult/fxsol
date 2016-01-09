@@ -8,7 +8,7 @@ import java.util.TreeMap;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 /**
- * 这个增强对象让所有get(key)时都有值
+ * 这个增强对象让所有get(key)DescriptiveStatistics时都有值
  * 判断这个map里面是否存在key时,请用containKey(Object)方法
  * @author LiangJingJing
  * @date Dec 5, 2015 10:56:28 PM

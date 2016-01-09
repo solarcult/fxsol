@@ -1,4 +1,5 @@
-package shi.fxsol.vo;
+package shi.fxsol.domain.eventdef;
+
 
 
 public enum US {
@@ -7,7 +8,7 @@ public enum US {
 		public static String USname = "United States";
 		public static String None = "None is nothing.";
 		
-		public static Event III_Consumer_Price_Index = new Event(
+		public static EventDef III_Consumer_Price_Index = new EventDef(
 				USname,
 				"Consumer Price Index", 
 				"The Consumer Price Index is a measure of the change in the average price level of a fixed basket of goods and services purchased by consumers. That is the index shows the change in price levels since the index base period, currently 1982-84 = 100. Monthly changes in the CPI represent the rate of inflation.\nThe consumer price index is available nationally by expenditure category and by commodity and service group for all urban consumers (CPI-U) and wage earners (CPI-W). All urban consumers are a more inclusive group, representing about 87 percent of the population. The CPI-U is the more widely quoted of the two, although cost-of-living contracts for unions and Social Security benefits are usually tied to the CPI-W, because it has a longer history. Monthly variations between the two are slight.\nThe CPI is also available by size of city, by region of the country, for cross-classifications of regions and population-size classes, and for many metropolitan areas. The regional and city CPIs are often used in local contracts.\nThe Bureau of Labor Statistics also produces a chain-weighted index called the Chained CPI. This measures a variable basket of goods and services whereas the regular CPI-U and CPI-W measure a fixed basket of goods and services. The Chained CPI is similar to the personal consumption expenditure price index that is closely monitored by the Federal Reserve Board.", 
@@ -20,7 +21,7 @@ public enum US {
 				"Data are for one month prior to release month. Data for June are released in July.", 
 				"No",
 				"13:30");
-		public static Event III_Durable_Goods_Orders = new Event(
+		public static EventDef III_Durable_Goods_Orders = new EventDef(
 				USname, 
 				"Durable Goods Orders", 
 				"Durable goods orders reflect the new orders placed with domestic manufacturers for immediate and future delivery of factory hard goods. The first release, the advance, provides an early estimate of durable goods orders. About two weeks later, more complete and revised data are available in the factory orders report. The data for the previous month are usually revised a second time upon the release of the new month's data.\nDurable goods orders are available nationally by both industry and market categories. A new order is accompanied by a legally binding agreement to purchase for immediate or future delivery. Advance durable goods orders no longer include data on semiconductors since semiconductor manufacturers stopped releasing this information to the Census Bureau.\nThe advance durable goods report also contains information on shipments, unfilled orders and inventories. Shipments represent deliveries made, valued at net selling price after discounts and allowances, excluding freight charges and excise taxes. Semiconductor data are available for shipments and inventories. Unfilled orders are those received but not yet delivered.\nIn 2001, the Census Bureau shifted from the standard industrial classification (SIC) system to the North American Industrial Classification System (NAICS). This caused some realignment of major industry classifications. Given the significant revisions incurred, the historical data now begin in 1992.", 
@@ -33,7 +34,7 @@ public enum US {
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes",
 				"13:30");
-		public static Event IIIII_Employment_Situation = new Event(
+		public static EventDef IIIII_Employment_Situation = new EventDef(
 				USname, 
 				"Employment Situation", 
 				"The employment situation is a set of labor market indicators based on two separate surveys in this one report. The unemployment rate equals the number of unemployed persons divided by the total number of persons in the labor force, which comes from a survey of 60,000 households (this is called the household survey). Workers are only counted once, no matter how many jobs they have, or whether they are only working part-time. In order to be counted as unemployed, one must be actively looking for work. Other commonly known figures from the Household Survey include the labor supply and discouraged workers.\nThe Establishment Survey-a survey of over 557,000 worksites- provides additional indicators. Nonfarm payroll employment is the most popular and well-known indicator from this survey. Business establishments in the nonfarm sector report the number of workers currently on their payrolls. Double counting occurs when individuals hold more than one job. Workers on strike during the relevant week are not included in the figures.\nDue to sizeable swings in payroll employment during 2010 for hiring and then layoffs of temporary workers for the decentennial Census, analysts started giving essentially equal attention to private nonfarm payrolls as to overall payrolls. This added focus continued even after temporary Census worker issues were no longer a problem as the long-duration recession caused state & local governments to cut their workforce even as the private sector began to rehire during recovery.\nThe average workweek is a leading indicator of employment. Businesses tend to adjust total hours worked by increasing or decreasing the workweek before hiring someone new or laying someone off. These figures come from the Establishment Survey.\nAverage hourly earnings are monthly payroll figures reported before deductions for taxes, social insurance and fringe benefits. They include pay for overtime, holidays, vacation and sick leave. These figures come from the Establishment Survey.",
@@ -46,7 +47,7 @@ public enum US {
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes. Monthly revisions for payroll data go back two months and annual revisions are released in February with January data.",
 				"13:30");
-		public static Event III_Existing_Home_Sales = new Event(
+		public static EventDef III_Existing_Home_Sales = new EventDef(
 				USname, 
 				"Existing Home Sales", 
 				"Existing home sales tally the number of previously constructed homes, condominiums and co-ops in which a sale closed during the month. Existing homes (also known as home resales) account for a larger share of the market than new homes and indicate housing market trends. (National Association of Realtors)", 
@@ -97,7 +98,7 @@ public enum US {
 //				"Forecasts are released at about 2:00 p.m. ET on days of the release of FOMC policy statements during the months of March, June, September, and December.", 
 //				None, 
 //				"No");
-		public static Event III_FOMC_Meeting_Announcement = new Event(
+		public static EventDef III_FOMC_Meeting_Announcement = new EventDef(
 				USname, 
 				"FOMC Meeting Announcement", 
 				"The Federal Open Market Committee (FOMC) is the policy-making arm of the Federal Reserve. It determines short-term interest rates in the U.S. when it decides the overnight rate that banks pay each other for borrowing reserves when a bank has a shortfall in required reserves. This rate is the fed funds rate. The FOMC also determines whether the Fed should add or subtract liquidity in credit markets separately from that related to changes in the fed funds rate. The Fed announces its policy decision (typically whether to change the fed funds target rate) at the end of each FOMC meeting. This is the FOMC announcement. The announcement also includes brief comments on the FOMC's views on the economy and how many FOMC members voted for and how many voted against the policy decision. Since the last recession, the statement also includes information on Fed purchases of assets, so-called 'quantitative easing', which affects longer-term interest rates. Also, a key part of the announcement is guidance on potential changes in policy rates or asset purchases.", 
@@ -110,7 +111,7 @@ public enum US {
 				"Not applicable.", 
 				"Not applicable.",
 				"19:00");
-		public static Event III_GDP = new Event(
+		public static EventDef III_GDP = new EventDef(
 				USname, 
 				"GDP", 
 				"GDP represents the total value of the country's production during the period and consists of the purchases of domestically-produced goods and services by individuals, businesses, foreigners and government entities. Data are available in nominal and real (inflation-adjusted) dollars, as well as in index form. Economists and market players always monitor the real growth rates generated by the GDP quantity index or the real dollar value. The quantity index measures inflation-adjusted activity, but we are more accustomed to looking at dollar values.\nIndividuals purchase personal consumption expenditures -- durable goods (such as furniture and cars), nondurable goods (such as clothing and food) and services (such as banking, education and transportation).\nPrivate housing purchases are classified as residential investment. Businesses invest in nonresidential structures, durable equipment and computer software. Inventories at all stages of production are counted as investment. Only inventory changes, not levels, are added to GDP.\nNet exports equal the sum of exports less imports. Exports are the purchases by foreigners of goods and services produced in the United States. Imports represent domestic purchases of foreign-produced goods and services and must be deducted from the calculation of GDP.\nGovernment purchases of goods and services are the compensation of government employees and purchases from businesses and abroad. Data show the portion attributed to consumption and investment. Government outlays for transfer payments or interest payments are not included in GDP.\nThe GDP price index is a comprehensive indicator of inflation. It is typically lower than the consumer price index because investment goods (which are in the GDP price index but not the CPI) tend have lower rates of inflation than consumer goods and services.", 
@@ -123,7 +124,7 @@ public enum US {
 				"Data are for the prior quarter. Data released in April are for the first quarter. Each quarter's data are revised in each of the following two months after the initial release.", 
 				"Yes.",
 				"13:30");
-		public static Event III_Housing_Starts = new Event(
+		public static EventDef III_Housing_Starts = new EventDef(
 				USname, 
 				"Housing Starts", 
 				"A housing start is registered at the start of construction of a new building intended primarily as a residential building. The start of construction is defined as the beginning of excavation of the foundation for the building.", 
@@ -148,7 +149,7 @@ public enum US {
 //				"Usually mid- month.", 
 //				"Data are for the previous month. Data for June are released in July.", 
 //				"Yes.");
-		public static Event III_International_Trade = new Event(
+		public static EventDef III_International_Trade = new EventDef(
 				USname, 
 				"International Trade", 
 				"International trade is composed of merchandise (tangible goods) and services. It is available nationally by export, import and trade balance. Merchandise trade is available by export, import and trade balance for six principal end-use commodity categories and for more than one hundred principal Standard International Trade Classification (SITC) system commodity groupings. Data are also available for 36 countries and geographic regions. Detailed information is reported on oil and motor vehicle imports. Services trade is available by export, import and trade balance for seven principal end-use categories.", 
@@ -173,7 +174,7 @@ public enum US {
 //				"Last week of the month", 
 //				"Data are for two months back. Data for June are released in August.", 
 //				"yes");
-		public static Event III_ISM_Mfg_Index = new Event(
+		public static EventDef III_ISM_Mfg_Index = new EventDef(
 				USname, 
 				"ISM Mfg Index", 
 				"The ISM manufacturing composite index is a diffusion index calculated from five of the eleven sub-components of a monthly survey of purchasing managers at roughly 300 manufacturing firms nationwide. The survey queries purchasing managers about the general direction of production, new orders, order backlogs, their own inventories, customer inventories, employment, supplier deliveries, exports, imports, and prices. The five components of the composite index are new orders, production, employment, supplier deliveries, and inventories (their own, not customer inventories). The five components are equally weighted. The questions are qualitative rather than quantitative; that is, they ask about the general direction rather than the specific level of activity. Each question is transformed into a diffusion index which is calculated by adding the percentage of positive responses to one-half of the unchanged responses.", 
@@ -186,7 +187,7 @@ public enum US {
 				"Data are for the previous month. Data for June are released in July.", 
 				"No.",
 				"15:00");
-		public static Event III_Jobless_Claims = new Event(
+		public static EventDef III_Jobless_Claims = new EventDef(
 				USname, 
 				"Jobless Claims", 
 				"New unemployment claims are compiled weekly to show the number of individuals who filed for unemployment insurance for the first time. An increasing (decreasing) trend suggests a deteriorating (improving) labor market. The four-week moving average of new claims smooths out weekly volatility.", 
@@ -199,7 +200,7 @@ public enum US {
 				"Week-ending Saturday before the release.", 
 				"Yes.",
 				"13:30");
-		public static Event III_New_Home_Sales = new Event(
+		public static EventDef III_New_Home_Sales = new EventDef(
 				USname, 
 				"New Home Sales", 
 				"New home sales measure the number of newly constructed homes with a committed sale during the month. The level of new home sales indicates housing market trends and, in turn, economic momentum and consumer purchases of furniture and appliances.", 
@@ -212,7 +213,7 @@ public enum US {
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes.",
 				"15:00");
-		public static Event III_Personal_Income_and_Outlays = new Event(
+		public static EventDef III_Personal_Income_and_Outlays = new EventDef(
 				USname, 
 				"Personal Income and Outlays", 
 				"Personal income represents the income that households receive from all sources including wages and salaries, fringe benefits such as employer contributions of private pension plans, proprietors' income, income from rent, dividends and interest and transfer payments such as Social Security and unemployment compensation. Personal contributions for social insurance are subtracted from personal income.\nPersonal consumption expenditures are the major portion of personal outlays, which also include personal interest payments and transfer payments. Personal consumption expenditures are divided into durable goods, nondurable goods and services. These figures are the monthly analogues to the quarterly consumption expenditures in the GDP report, available in nominal and real (inflation-adjusted) dollars. Economic performance is more appropriately measured after the effects of inflation are removed.\nEach month, the Bureau of Economic Analysis also compiles the personal consumption expenditure price index, also known as the PCE price index. This inflation index measures a basket of goods and services that is updated annually in contrast to the CPI, which measures a fixed basket. ", 
@@ -225,7 +226,7 @@ public enum US {
 				"Data are for the previous month. Data for June are released in July.", 
 				"Yes.",
 				"13:30");
-		public static Event Philadelphia_Fed_Business_Outlook_Survey = new Event(
+		public static EventDef Philadelphia_Fed_Business_Outlook_Survey = new EventDef(
 				USname, 
 				"Philadelphia Fed Business Outlook Survey", 
 				"The general conditions index from this business outlook survey is a diffusion index of manufacturing conditions within the Philadelphia Federal Reserve district. This survey, widely followed as an indicator of manufacturing sector trends, is correlated with the ISM manufacturing index and the index of industrial production.", 
@@ -262,7 +263,7 @@ public enum US {
 //				"Around mid-month.", 
 //				"Data are for one month prior to release month. Data for June are released in July.", 
 //				"Yes.");
-		public static Event III_Retail_Sales = new Event(
+		public static EventDef III_Retail_Sales = new EventDef(
 				USname, 
 				"Retail Sales", 
 				"Retail sales measure the total receipts at stores that sell merchandise and related services to final consumers. Sales are by retail and food services stores. Data are collected from the Monthly Retail Trade Survey conducted by the U.S. Bureau of the Census. Essentially, retail sales cover the durables and nondurables portions of consumer spending. Consumer spending typically accounts for about two-thirds of GDP and is therefore a key element in economic growth.", 
@@ -338,7 +339,7 @@ public enum US {
 //				"No");
 		
 		
-		public static Event getUSEvent(String eventName){
+		public static EventDef getUSEvent(String eventName){
 			if("Consumer Price Index".equals(eventName)){
 				return III_Consumer_Price_Index;
 			}

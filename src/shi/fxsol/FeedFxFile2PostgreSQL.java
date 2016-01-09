@@ -2,12 +2,12 @@ package shi.fxsol;
 
 import java.io.File;
 
-import shi.fxsol.cvs.LoadCVSData2FxMetaData2DB;
+import shi.fxsol.file.LoadCVSData2FxMetaData2DB;
 
-public class FeedFxMetaData2PostgreSQL {
+public class FeedFxFile2PostgreSQL {
 
 	public static void main(String[] args) {
-		File dataDir = new File("fxmetadata");
+		File dataDir = new File("metadata\\fx");
 		LoadCVSData2FxMetaData2DB.loadFoler2DB(dataDir);
 	}
 }

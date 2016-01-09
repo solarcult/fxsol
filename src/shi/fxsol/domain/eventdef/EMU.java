@@ -1,4 +1,4 @@
-package shi.fxsol.vo;
+package shi.fxsol.domain.eventdef;
 
 public enum EMU {
 	european, monetary, union;

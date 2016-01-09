@@ -1,0 +1,22 @@
+-- Table: event
+
+-- DROP TABLE event;
+
+CREATE TABLE event
+(
+  id bigserial NOT NULL,
+  year integer NOT NULL,
+  month integer NOT NULL,
+  day integer NOT NULL,
+  hour integer NOT NULL,
+  minute integer NOT NULL,
+  sdate text,
+  stime text,
+  expect double precision,
+  actual double precision,
+  diff double precision,
+  name text NOT NULL,
+  country text NOT NULL,
+  edate date NOT NULL,
+  CONSTRAINT event_pkey PRIMARY KEY (year, month, day, hour, minute, name, country)
+)

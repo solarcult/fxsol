@@ -1,10 +1,9 @@
-package shi.fxsol.vo;
+package shi.fxsol.domain;
 
 import java.util.Calendar;
 
 public class FxMetaData {
-	
-	private long id;
+
 	//交易品种
 	private String name;
 	//时间框架 分钟计数 1440
@@ -238,16 +237,10 @@ public class FxMetaData {
 			return false;
 		return true;
 	}
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
 	
 	@Override
 	public String toString() {
-		return "FxMetaData [id=" + id + ", name=" + name + ", timeframe="
+		return "FxMetaData [name=" + name + ", timeframe="
 				+ timeframe + ", datetime=" + datetime + ", year=" + year
 				+ ", month=" + month + ", day=" + day + ", hour=" + hour
 				+ ", minute=" + minute + ", sdate=" + sdate + ", stime="

@@ -6,16 +6,16 @@ import java.util.Map.Entry;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import shi.fxsol.db.FxMetaDataDaoImpl;
+import shi.fxsol.domain.FxMetaData;
 import shi.fxsol.uitls.EnhancedKeyAlwaysGetDescriptiveStatisticsMap;
 import shi.fxsol.uitls.FxCalenderUtils;
-import shi.fxsol.vo.FxMetaData;
 
 public class AverageWeekDayMaxMinRange {
 
 	//按照星期N算平均最大波动
 	public static void analyzeWeekdayMaxMinRange(String name,String timeframe,int lastNmonth){
 
- 		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.queryFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
+ 		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
 		EnhancedKeyAlwaysGetDescriptiveStatisticsMap map = new EnhancedKeyAlwaysGetDescriptiveStatisticsMap();
 		for(FxMetaData one : fxMetaDatas){
 			map.get(one.getWeekofday()).addValue(one.getHigh()-one.getLow());
@@ -31,7 +31,7 @@ public class AverageWeekDayMaxMinRange {
 	
 	public static void analyzeSpecialweekofDayMaxMinRange(String name,String timeframe,int lastNmonth){
 
- 		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.queryFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
+ 		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
 		EnhancedKeyAlwaysGetDescriptiveStatisticsMap map = new EnhancedKeyAlwaysGetDescriptiveStatisticsMap();
 		for(FxMetaData one : fxMetaDatas){
 			map.get(one.getSpecialweek()+" : "+one.getWeekofday()).addValue(one.getHigh()-one.getLow());
@@ -47,7 +47,7 @@ public class AverageWeekDayMaxMinRange {
 	
 	public static void analyzeMonthSpecialweekofDayMaxMinRange(String name,String timeframe,int lastNmonth){
 
- 		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.queryFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
+ 		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
 		EnhancedKeyAlwaysGetDescriptiveStatisticsMap map = new EnhancedKeyAlwaysGetDescriptiveStatisticsMap();
 		for(FxMetaData one : fxMetaDatas){
 			map.get(FxCalenderUtils.convertNumberMonth2String(one.getMonth())+" : "+one.getSpecialweek()+" : "+one.getWeekofday()).addValue(one.getHigh()-one.getLow());
