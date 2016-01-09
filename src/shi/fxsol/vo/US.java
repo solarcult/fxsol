@@ -18,7 +18,8 @@ public enum US {
 				"Bureau of Labor Statistics (BLS), U.S. Department of Labor", 
 				"Around mid-month.", 
 				"Data are for one month prior to release month. Data for June are released in July.", 
-				"No");
+				"No",
+				"13:30");
 		public static Event III_Durable_Goods_Orders = new Event(
 				USname, 
 				"Durable Goods Orders", 
@@ -30,7 +31,8 @@ public enum US {
 				"Bureau of the Census, U.S. Department of Commerce.", 
 				"Usually during the fourth week of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
-				"Yes");
+				"Yes",
+				"13:30");
 		public static Event IIIII_Employment_Situation = new Event(
 				USname, 
 				"Employment Situation", 
@@ -42,7 +44,8 @@ public enum US {
 				"Bureau of Labor Statistics (BLS), U.S. Department of Labor.", 
 				"Usually the first Friday day of the month. However, the official rule is that estimates for a given reference month are typically released on the third Friday after the conclusion of the reference week; i.e., the week which includes the 12th of the month. This occasionally results in a release date on the second Friday of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
-				"Yes. Monthly revisions for payroll data go back two months and annual revisions are released in February with January data.");
+				"Yes. Monthly revisions for payroll data go back two months and annual revisions are released in February with January data.",
+				"13:30");
 		public static Event III_Existing_Home_Sales = new Event(
 				USname, 
 				"Existing Home Sales", 
@@ -54,7 +57,8 @@ public enum US {
 				"National Association of Realtors.", 
 				"On or about the 25th of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
-				"Yes.");
+				"Yes.",
+				"15:00");
 		/*
 		public static Event Fed_Chair_Press_Conference = new Event(
 				USname, 
@@ -81,18 +85,18 @@ public enum US {
 				"Not applicable.", 
 				"Not applicable.");
 		*/
-		public static Event FOMC_Forecasts = new Event(
-				USname, 
-				"FOMC Forecasts", 
-				"The Fed now releases economic projections four times a year (March, June, September, and December). Traditionally, the Fed forecasts covered GDP, the PCE price index, and the civilian unemployment rate. However, the forecast report additionally now includes forecasts for the appropriate timing of the next change in the fed funds rate and the expected fed funds rate at the end of the next two years. As of March 20, 2013, the forecasts are released at the same time as the FOMC statement which is 2:00 p.m. ET and 30 minutes prior to the Fed chairman's press conference which addresses the forecasts and Fed policy in general. The forecasts are a composite of individual forecasts by each Fed governor and each District president and cover two to three years out on an annual basis. The GDP, inflation, and unemployment numbers are published as a 'central tendency' and also as a range. The central tendency is an average of the forecasts after the highest and lowest forecasts are removed. The range shows the highest and lowest forecasts for these indicators.", 
-				None, 
-				None, 
-				None, 
-				"Quarterly", 
-				"Federal Reserve Board of Governors", 
-				"Forecasts are released at about 2:00 p.m. ET on days of the release of FOMC policy statements during the months of March, June, September, and December.", 
-				None, 
-				"No");
+//		public static Event FOMC_Forecasts = new Event(
+//				USname, 
+//				"FOMC Forecasts", 
+//				"The Fed now releases economic projections four times a year (March, June, September, and December). Traditionally, the Fed forecasts covered GDP, the PCE price index, and the civilian unemployment rate. However, the forecast report additionally now includes forecasts for the appropriate timing of the next change in the fed funds rate and the expected fed funds rate at the end of the next two years. As of March 20, 2013, the forecasts are released at the same time as the FOMC statement which is 2:00 p.m. ET and 30 minutes prior to the Fed chairman's press conference which addresses the forecasts and Fed policy in general. The forecasts are a composite of individual forecasts by each Fed governor and each District president and cover two to three years out on an annual basis. The GDP, inflation, and unemployment numbers are published as a 'central tendency' and also as a range. The central tendency is an average of the forecasts after the highest and lowest forecasts are removed. The range shows the highest and lowest forecasts for these indicators.", 
+//				None, 
+//				None, 
+//				None, 
+//				"Quarterly", 
+//				"Federal Reserve Board of Governors", 
+//				"Forecasts are released at about 2:00 p.m. ET on days of the release of FOMC policy statements during the months of March, June, September, and December.", 
+//				None, 
+//				"No");
 		public static Event III_FOMC_Meeting_Announcement = new Event(
 				USname, 
 				"FOMC Meeting Announcement", 
@@ -104,7 +108,8 @@ public enum US {
 				"Federal Reserve Board of Governors", 
 				"FOMC meetings are scheduled for eight times a year, typically for late January, mid-March, late April, mid-June, late July, mid-September, late October, and mid-December.", 
 				"Not applicable.", 
-				"Not applicable.");
+				"Not applicable.",
+				"19:00");
 		public static Event III_GDP = new Event(
 				USname, 
 				"GDP", 
@@ -116,7 +121,8 @@ public enum US {
 				"Bureau of Economic Analysis (BEA), U.S. Department of Commerce.", 
 				"Usually during the fourth week of the month.", 
 				"Data are for the prior quarter. Data released in April are for the first quarter. Each quarter's data are revised in each of the following two months after the initial release.", 
-				"Yes.");
+				"Yes.",
+				"13:30");
 		public static Event III_Housing_Starts = new Event(
 				USname, 
 				"Housing Starts", 
@@ -128,19 +134,20 @@ public enum US {
 				"U.S. Census Bureau, U.S. Department of Commerce and U.S. Department of Housing & Urban Development.", 
 				"Usually during the third week of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
-				"Yes");
-		public static Event III_Industrial_Production = new Event(
-				USname, 
-				"Industrial Production", 
-				"The Federal Reserve's monthly index of industrial production and the related capacity indexes and capacity utilization rates cover manufacturing, mining, and electric and gas utilities. The industrial sector, together with construction, accounts for the bulk of the variation in national output over the course of the business cycle. The production index measures real output and is expressed as a percentage of real output in a base year, currently 2007. The capacity index, which is an estimate of sustainable potential output, is also expressed as a percentage of actual output in 2007. The rate of capacity utilization equals the seasonally adjusted output index expressed as a percentage of the related capacity index.\nThe index of industrial production is available nationally by market and industry groupings. The major groupings are comprised of final products (such as consumer goods, business equipment and construction supplies), intermediate products and materials. The industry groupings are manufacturing (further subdivided into durable and nondurable goods), mining and utilities. The capacity utilization rate -- reflecting the resource utilization of the nation's output facilities -- is available for the same market and industry groupings.\nIndustrial production was also revised to NAICS (North American Industry Classification System) in the early 2000s. Unlike other economic series that lost much historical data prior to 1992, the Federal Reserve Board was able to reconstruction historical data that go back more than 30 years.", 
-				"Investors want to keep their finger on the pulse of the economy because it usually dictates how various types of investments will perform. The stock market likes to see healthy economic growth because that translates to higher corporate profits. The bond market prefers more subdued growth that won't lead to inflationary pressures. By tracking economic data such as industrial production, investors will know what the economic backdrop is for these markets and their portfolios.\nThe index of industrial production shows how much factories, mines and utilities are producing. The manufacturing sector accounts for less than 20 percent of the economy, but most of its cyclical variation. Consequently, this report has a big influence on market behavior. In any given month, one can see whether capital goods or consumer goods are growing more rapidly. Are manufacturers still producing construction supplies and other materials? This detailed report shows which sectors of the economy are growing and which are not.\nThe capacity utilization rate provides an estimate of how much factory capacity is in use. If the utilization rate gets too high (above 85 percent), it can lead to inflationary bottlenecks in production. The Federal Reserve watches this report closely and sets interest rate policy on the basis of whether production constraints are threatening to cause inflationary pressures. As such, the bond market can be highly sensitive to changes in the capacity utilization rate. In this global environment, though, global capacity constraints may matter as much as domestic capacity constraints.", 
-				"Industrial production and capacity utilization indicate not only trends in the manufacturing sector, but also whether resource utilization is strained enough to forebode inflation. Also, industrial production is an important measure of current output for the economy and helps to define turning points in the business cycle (start of recession and start of recovery).", 
-				"The bond market will rally with slower production and a lower utilization rate. Bond prices will fall when production is robust and the capacity utilization rate suggests supply bottlenecks. Healthy production growth is bullish for the stock market only if it isn't accompanied by indications of inflationary pressures.\nThe production of services may have gained prominence in the United States, but the production of manufactured goods remains a key to the economic business cycle. A nation's strength is judged by its ability to produce domestically those goods demanded by its residents as well as by importers. Many services are necessities of daily life and would be purchased whether economic conditions were weak or strong. Consumer durable goods and capital equipment are more likely purchased when the economy is robust. Production of manufactured goods causes volatility in the economy. When demand for manufactured goods decreases, it leads to less production with corresponding declines in employment and income.\nThe three most significant sectors include motor vehicles and parts, aircraft and information technology. Volatility in any these single sectors could affect the total.\nIndustrial production is subject to some monthly variation. As with all economic statistics, the three-month moving average of the monthly changes or year over year percent changes provide a clearer picture of the trend in this series.", 
-				"Monthly", 
-				"Federal Reserve Board of Governors.", 
-				"Usually mid- month.", 
-				"Data are for the previous month. Data for June are released in July.", 
-				"Yes.");
+				"Yes",
+				"13:30");
+//		public static Event III_Industrial_Production = new Event(
+//				USname, 
+//				"Industrial Production", 
+//				"The Federal Reserve's monthly index of industrial production and the related capacity indexes and capacity utilization rates cover manufacturing, mining, and electric and gas utilities. The industrial sector, together with construction, accounts for the bulk of the variation in national output over the course of the business cycle. The production index measures real output and is expressed as a percentage of real output in a base year, currently 2007. The capacity index, which is an estimate of sustainable potential output, is also expressed as a percentage of actual output in 2007. The rate of capacity utilization equals the seasonally adjusted output index expressed as a percentage of the related capacity index.\nThe index of industrial production is available nationally by market and industry groupings. The major groupings are comprised of final products (such as consumer goods, business equipment and construction supplies), intermediate products and materials. The industry groupings are manufacturing (further subdivided into durable and nondurable goods), mining and utilities. The capacity utilization rate -- reflecting the resource utilization of the nation's output facilities -- is available for the same market and industry groupings.\nIndustrial production was also revised to NAICS (North American Industry Classification System) in the early 2000s. Unlike other economic series that lost much historical data prior to 1992, the Federal Reserve Board was able to reconstruction historical data that go back more than 30 years.", 
+//				"Investors want to keep their finger on the pulse of the economy because it usually dictates how various types of investments will perform. The stock market likes to see healthy economic growth because that translates to higher corporate profits. The bond market prefers more subdued growth that won't lead to inflationary pressures. By tracking economic data such as industrial production, investors will know what the economic backdrop is for these markets and their portfolios.\nThe index of industrial production shows how much factories, mines and utilities are producing. The manufacturing sector accounts for less than 20 percent of the economy, but most of its cyclical variation. Consequently, this report has a big influence on market behavior. In any given month, one can see whether capital goods or consumer goods are growing more rapidly. Are manufacturers still producing construction supplies and other materials? This detailed report shows which sectors of the economy are growing and which are not.\nThe capacity utilization rate provides an estimate of how much factory capacity is in use. If the utilization rate gets too high (above 85 percent), it can lead to inflationary bottlenecks in production. The Federal Reserve watches this report closely and sets interest rate policy on the basis of whether production constraints are threatening to cause inflationary pressures. As such, the bond market can be highly sensitive to changes in the capacity utilization rate. In this global environment, though, global capacity constraints may matter as much as domestic capacity constraints.", 
+//				"Industrial production and capacity utilization indicate not only trends in the manufacturing sector, but also whether resource utilization is strained enough to forebode inflation. Also, industrial production is an important measure of current output for the economy and helps to define turning points in the business cycle (start of recession and start of recovery).", 
+//				"The bond market will rally with slower production and a lower utilization rate. Bond prices will fall when production is robust and the capacity utilization rate suggests supply bottlenecks. Healthy production growth is bullish for the stock market only if it isn't accompanied by indications of inflationary pressures.\nThe production of services may have gained prominence in the United States, but the production of manufactured goods remains a key to the economic business cycle. A nation's strength is judged by its ability to produce domestically those goods demanded by its residents as well as by importers. Many services are necessities of daily life and would be purchased whether economic conditions were weak or strong. Consumer durable goods and capital equipment are more likely purchased when the economy is robust. Production of manufactured goods causes volatility in the economy. When demand for manufactured goods decreases, it leads to less production with corresponding declines in employment and income.\nThe three most significant sectors include motor vehicles and parts, aircraft and information technology. Volatility in any these single sectors could affect the total.\nIndustrial production is subject to some monthly variation. As with all economic statistics, the three-month moving average of the monthly changes or year over year percent changes provide a clearer picture of the trend in this series.", 
+//				"Monthly", 
+//				"Federal Reserve Board of Governors.", 
+//				"Usually mid- month.", 
+//				"Data are for the previous month. Data for June are released in July.", 
+//				"Yes.");
 		public static Event III_International_Trade = new Event(
 				USname, 
 				"International Trade", 
@@ -152,19 +159,20 @@ public enum US {
 				"Bureau of Economic Analysis (BEA) and Bureau of the Census; U.S. Department of Commerce.", 
 				"Usually the first week of the month.", 
 				"Data are for two months back. Data for June are released in August.", 
-				"Yes.");
-		public static Event International_Trade_in_Goods = new Event(
-				USname, 
-				"International Trade in Goods", 
-				"The Census Bureau is now publishing an advance report on U.S. international trade in goods. The BEA will incorporate these data into its estimates of exports and imports for the advance GDP estimates. This is expected to reduce the size of revisions to GDP growth in the second estimates.", 
-				"Changes in the levels of imports and exports, along with the difference between the two (the trade balance), are valuable gauges of economic trends here and abroad. While these trade figures can directly impact all financial markets, they primarily affect the value of the dollar in the foreign exchange market.\nImports indicate demand for foreign goods here in the United States. Exports show foreign demand for U.S. goods. The dollar can be particularly sensitive to changes in the chronic trade deficit run by the United States, since this trade imbalance creates greater demand for foreign currencies.\nMarket reaction to this report is complex. Typically, the smaller the trade deficit, the more bullish it is for the dollar. Also, stronger exports are bullish for corporate earnings and the stock market. Like most economic indicators, the trade balance is subject to substantial monthly variability, especially when oil prices change.\nIt is also useful to examine the trend growth rates for exports and imports separately because they can deviate significantly. Trends in export activity reflect both the competitive position of American industry and the strength of domestic and foreign economic activity. U.S. exports will grow when: 1) U.S. product prices are lower than foreign product prices; 2) the value of the dollar is relatively weaker than that of foreign currencies; 3) foreign economies are growing rapidly.\nImports will increase when: 1) foreign product prices are lower than prices of domestically-produced goods; 2) the value of the dollar is stronger than that of other currencies; 3) domestic demand for goods and services is robust.", 
-				None, 
-				None, 
-				"Monthly", 
-				"Census Bureau", 
-				"Last week of the month", 
-				"Data are for two months back. Data for June are released in August.", 
-				"yes");
+				"Yes.",
+				"13:30");
+//		public static Event International_Trade_in_Goods = new Event(
+//				USname, 
+//				"International Trade in Goods", 
+//				"The Census Bureau is now publishing an advance report on U.S. international trade in goods. The BEA will incorporate these data into its estimates of exports and imports for the advance GDP estimates. This is expected to reduce the size of revisions to GDP growth in the second estimates.", 
+//				"Changes in the levels of imports and exports, along with the difference between the two (the trade balance), are valuable gauges of economic trends here and abroad. While these trade figures can directly impact all financial markets, they primarily affect the value of the dollar in the foreign exchange market.\nImports indicate demand for foreign goods here in the United States. Exports show foreign demand for U.S. goods. The dollar can be particularly sensitive to changes in the chronic trade deficit run by the United States, since this trade imbalance creates greater demand for foreign currencies.\nMarket reaction to this report is complex. Typically, the smaller the trade deficit, the more bullish it is for the dollar. Also, stronger exports are bullish for corporate earnings and the stock market. Like most economic indicators, the trade balance is subject to substantial monthly variability, especially when oil prices change.\nIt is also useful to examine the trend growth rates for exports and imports separately because they can deviate significantly. Trends in export activity reflect both the competitive position of American industry and the strength of domestic and foreign economic activity. U.S. exports will grow when: 1) U.S. product prices are lower than foreign product prices; 2) the value of the dollar is relatively weaker than that of foreign currencies; 3) foreign economies are growing rapidly.\nImports will increase when: 1) foreign product prices are lower than prices of domestically-produced goods; 2) the value of the dollar is stronger than that of other currencies; 3) domestic demand for goods and services is robust.", 
+//				None, 
+//				None, 
+//				"Monthly", 
+//				"Census Bureau", 
+//				"Last week of the month", 
+//				"Data are for two months back. Data for June are released in August.", 
+//				"yes");
 		public static Event III_ISM_Mfg_Index = new Event(
 				USname, 
 				"ISM Mfg Index", 
@@ -176,7 +184,8 @@ public enum US {
 				"Institute for Supply Management.", 
 				"The first business day of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
-				"No.");
+				"No.",
+				"15:00");
 		public static Event III_Jobless_Claims = new Event(
 				USname, 
 				"Jobless Claims", 
@@ -188,7 +197,8 @@ public enum US {
 				"Employment and Training Administration, U.S. Department of Labor.", 
 				"Thursdays.", 
 				"Week-ending Saturday before the release.", 
-				"Yes.");
+				"Yes.",
+				"13:30");
 		public static Event III_New_Home_Sales = new Event(
 				USname, 
 				"New Home Sales", 
@@ -200,7 +210,8 @@ public enum US {
 				"U.S. Bureau of the Census, U.S. Commerce Department and the U.S. Department of Housing and Urban Development.", 
 				"Near the end of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
-				"Yes.");
+				"Yes.",
+				"15:00");
 		public static Event III_Personal_Income_and_Outlays = new Event(
 				USname, 
 				"Personal Income and Outlays", 
@@ -212,7 +223,8 @@ public enum US {
 				"Bureau of Economic Analysis, U.S. Department of Commerce.", 
 				"Usually the last week of the month.", 
 				"Data are for the previous month. Data for June are released in July.", 
-				"Yes.");
+				"Yes.",
+				"13:30");
 		public static Event Philadelphia_Fed_Business_Outlook_Survey = new Event(
 				USname, 
 				"Philadelphia Fed Business Outlook Survey", 
@@ -224,31 +236,32 @@ public enum US {
 				"Federal Reserve Bank of Philadelphia.", 
 				"Third Thursday of each month.", 
 				"Data are for the same month as the release month. Data for June are released in June.", 
-				"No.");
-		public static Event PPI_FD = new Event(
-				USname, 
-				"PPI-FD", 
-				"The Producer Price Index (PPI) of the Bureau of Labor Statistics (BLS) is a family of indexes that measure the average change over time in the prices received by domestic producers of goods and services. PPIs measure price change from the perspective of the seller. Effective with the January 2014 PPI data release in February 2014, BLS transitioned from the Stage of Processing (SOP) to the Final Demand-Intermediate Demand (FD-ID) aggregation system. The headline PPI (for Final Demand) measures price changes for goods, services, and construction sold to final demand: personal consumption, capital investment, government purchases, and exports.", 
-				"The PPI measures prices at the producer level before they are passed along to final consumers. A portion of the inflation at the producer level gets passed through to the consumer price index (CPI). By tracking price pressures in the pipeline, investors can anticipate inflationary consequences in coming months.\nWhile the CPI is the price index with the most impact in setting interest rates, the PPI provides significant information earlier in the production process. As a starting point, interest rates have an 'inflation premium' and components for risk factors. A lender will want the money paid back from a loan to at least have the same purchasing power as when loaned. The interest rate at a minimum equals the inflation rate to maintain purchasing power and this generally is based on the CPI. Changes in inflation lead to changes in interest rates and, in turn, in equity prices.\nThe PPI comes in two key main versions: final demand (FD) and intermediate demand (ID). The final demand portion is composed of six main price indexes: final demand goods; final demand trade services; final demand transportation and warehousing services; final demand services less trade, transportation, and warehousing; final demand construction; and overall final demand.\nThe intermediate demand portion of the FD-ID system tracks price changes for goods, services, and construction products sold to businesses as inputs to production, excluding capital investment. There are two parallel treatments of intermediate demand, each constructed from the identical set of commodity price indexes. The first treatment organizes commodities according to commodity type, and the second organizes commodities using a stage-based, production flow model.\nThe PPI is considered a precursor of both consumer price inflation and profits. If the prices paid to producers increase, businesses are faced with either charging higher prices or taking a cut in profits. The ability to pass along price increases depends on the strength and competitiveness of the marketplace.\nUnder the prior PPI system, the producer price index was substantially more volatile than the consumer price index because the CPI included services while the PPI did not. Volatility has been reduced substantially in the PPI-FD due to the inclusion of services but the PPI still is more volatile than the CPI. Wages are a bigger share of the costs at the retail level than at the producer level and this plays a role in the CPI��s lower volatility. Also, the PPI does not include owners�� equivalent rent��a large and slow moving component in the CPI. Food and energy prices are major sources of volatility in the PPI, hence, the greater focus on the 'core PPI' which excludes these two components.\nThe bond market rallies when the PPI decreases or posts only small increases, but bond prices fall when the PPI posts larger-than-expected gains. The equity market rallies with the bond market because low inflation promises low interest rates and is good for profits.", 
-				None, 
-				None, 
-				"Monthly", 
-				"Bureau of Labor Statistics (BLS), U.S. Department of Labor.", 
-				"Around mid-month.", 
-				"Data are for one month prior to release month. Data for June are released in July.", 
-				"Yes.");
-		public static Event III_Producer_Price_Index = new Event(
-				USname, 
-				"Producer Price Index", 
-				"The Producer Price Index (PPI) of the Bureau of Labor Statistics (BLS) is a family of indexes that measure the average change over time in the prices received by domestic producers of goods and services. PPIs measure price change from the perspective of the seller. Effective with the January 2014 PPI data release in February 2014, BLS transitioned from the Stage of Processing (SOP) to the Final Demand-Intermediate Demand (FD-ID) aggregation system. The headline PPI (for Final Demand) measures price changes for goods, services, and construction sold to final demand: personal consumption, capital investment, government purchases, and exports.", 
-				"The PPI measures prices at the producer level before they are passed along to final consumers. A portion of the inflation at the producer level gets passed through to the consumer price index (CPI). By tracking price pressures in the pipeline, investors can anticipate inflationary consequences in coming months.\nWhile the CPI is the price index with the most impact in setting interest rates, the PPI provides significant information earlier in the production process. As a starting point, interest rates have an 'inflation premium' and components for risk factors. A lender will want the money paid back from a loan to at least have the same purchasing power as when loaned. The interest rate at a minimum equals the inflation rate to maintain purchasing power and this generally is based on the CPI. Changes in inflation lead to changes in interest rates and, in turn, in equity prices.\nThe PPI comes in two key main versions: final demand (FD) and intermediate demand (ID). The final demand portion is composed of six main price indexes: final demand goods; final demand trade services; final demand transportation and warehousing services; final demand services less trade, transportation, and warehousing; final demand construction; and overall final demand.\nThe intermediate demand portion of the FD-ID system tracks price changes for goods, services, and construction products sold to businesses as inputs to production, excluding capital investment. There are two parallel treatments of intermediate demand, each constructed from the identical set of commodity price indexes. The first treatment organizes commodities according to commodity type, and the second organizes commodities using a stage-based, production flow model.\nThe PPI is considered a precursor of both consumer price inflation and profits. If the prices paid to producers increase, businesses are faced with either charging higher prices or taking a cut in profits. The ability to pass along price increases depends on the strength and competitiveness of the marketplace.\nUnder the prior PPI system, the producer price index was substantially more volatile than the consumer price index because the CPI included services while the PPI did not. Volatility has been reduced substantially in the PPI-FD due to the inclusion of services but the PPI still is more volatile than the CPI. Wages are a bigger share of the costs at the retail level than at the producer level and this plays a role in the CPI��s lower volatility. Also, the PPI does not include owners�� equivalent rent��a large and slow moving component in the CPI. Food and energy prices are major sources of volatility in the PPI, hence, the greater focus on the 'core PPI' which excludes these two components.\nThe bond market rallies when the PPI decreases or posts only small increases, but bond prices fall when the PPI posts larger-than-expected gains. The equity market rallies with the bond market because low inflation promises low interest rates and is good for profits.", 
-				"Producer price indexes for final demand and intermediate demand are major indicators of prices at the producer level. Changes in the producer price index are considered a leading indicator for consumer price changes.", 
-				"The bond market will rally when the PPI decreases or posts only small increases, but bond prices will fall when the PPI post larger-than-expected gains. The equity market rallies with the bond market because low inflation promises low interest rates and is good for profits.\nChanges in the producer price index are considered a precursor of consumer price inflation. If prices that producers receive rise, then retailers will attempt to pass those costs to consumers. However, changes in the supply and demand for labor will affect wage changes with a delay because wages are institutionalized and contractual and have a larger impact on consumer prices than producer prices.\nFood and energy prices, which make up about 11 to 12 percent of the PPI-FD, are the major source of the volatility. Due to sharp movements in these two components, market players and economists have become accustomed to monitoring the PPI excluding food and energy. In shorthand, this is also referred to as the 'core' PPI. (In reality, what can be more 'core' than food and gasoline to consumers?)\nThe PPI for final demand gets the most attention, but market players have turned to the PPI for intermediate demand for early indications of inflation. This set of PPI data is organized in part by production flow. However, the earlier the stage of processing, the more volatile the index.", 
-				"Monthly", 
-				"Bureau of Labor Statistics (BLS), U.S. Department of Labor.", 
-				"Around mid-month.", 
-				"Data are for one month prior to release month. Data for June are released in July.", 
-				"Yes.");
+				"No.",
+				"13:30");
+//		public static Event PPI_FD = new Event(
+//				USname, 
+//				"PPI-FD", 
+//				"The Producer Price Index (PPI) of the Bureau of Labor Statistics (BLS) is a family of indexes that measure the average change over time in the prices received by domestic producers of goods and services. PPIs measure price change from the perspective of the seller. Effective with the January 2014 PPI data release in February 2014, BLS transitioned from the Stage of Processing (SOP) to the Final Demand-Intermediate Demand (FD-ID) aggregation system. The headline PPI (for Final Demand) measures price changes for goods, services, and construction sold to final demand: personal consumption, capital investment, government purchases, and exports.", 
+//				"The PPI measures prices at the producer level before they are passed along to final consumers. A portion of the inflation at the producer level gets passed through to the consumer price index (CPI). By tracking price pressures in the pipeline, investors can anticipate inflationary consequences in coming months.\nWhile the CPI is the price index with the most impact in setting interest rates, the PPI provides significant information earlier in the production process. As a starting point, interest rates have an 'inflation premium' and components for risk factors. A lender will want the money paid back from a loan to at least have the same purchasing power as when loaned. The interest rate at a minimum equals the inflation rate to maintain purchasing power and this generally is based on the CPI. Changes in inflation lead to changes in interest rates and, in turn, in equity prices.\nThe PPI comes in two key main versions: final demand (FD) and intermediate demand (ID). The final demand portion is composed of six main price indexes: final demand goods; final demand trade services; final demand transportation and warehousing services; final demand services less trade, transportation, and warehousing; final demand construction; and overall final demand.\nThe intermediate demand portion of the FD-ID system tracks price changes for goods, services, and construction products sold to businesses as inputs to production, excluding capital investment. There are two parallel treatments of intermediate demand, each constructed from the identical set of commodity price indexes. The first treatment organizes commodities according to commodity type, and the second organizes commodities using a stage-based, production flow model.\nThe PPI is considered a precursor of both consumer price inflation and profits. If the prices paid to producers increase, businesses are faced with either charging higher prices or taking a cut in profits. The ability to pass along price increases depends on the strength and competitiveness of the marketplace.\nUnder the prior PPI system, the producer price index was substantially more volatile than the consumer price index because the CPI included services while the PPI did not. Volatility has been reduced substantially in the PPI-FD due to the inclusion of services but the PPI still is more volatile than the CPI. Wages are a bigger share of the costs at the retail level than at the producer level and this plays a role in the CPI��s lower volatility. Also, the PPI does not include owners�� equivalent rent��a large and slow moving component in the CPI. Food and energy prices are major sources of volatility in the PPI, hence, the greater focus on the 'core PPI' which excludes these two components.\nThe bond market rallies when the PPI decreases or posts only small increases, but bond prices fall when the PPI posts larger-than-expected gains. The equity market rallies with the bond market because low inflation promises low interest rates and is good for profits.", 
+//				None, 
+//				None, 
+//				"Monthly", 
+//				"Bureau of Labor Statistics (BLS), U.S. Department of Labor.", 
+//				"Around mid-month.", 
+//				"Data are for one month prior to release month. Data for June are released in July.", 
+//				"Yes.");
+//		public static Event III_Producer_Price_Index = new Event(
+//				USname, 
+//				"Producer Price Index", 
+//				"The Producer Price Index (PPI) of the Bureau of Labor Statistics (BLS) is a family of indexes that measure the average change over time in the prices received by domestic producers of goods and services. PPIs measure price change from the perspective of the seller. Effective with the January 2014 PPI data release in February 2014, BLS transitioned from the Stage of Processing (SOP) to the Final Demand-Intermediate Demand (FD-ID) aggregation system. The headline PPI (for Final Demand) measures price changes for goods, services, and construction sold to final demand: personal consumption, capital investment, government purchases, and exports.", 
+//				"The PPI measures prices at the producer level before they are passed along to final consumers. A portion of the inflation at the producer level gets passed through to the consumer price index (CPI). By tracking price pressures in the pipeline, investors can anticipate inflationary consequences in coming months.\nWhile the CPI is the price index with the most impact in setting interest rates, the PPI provides significant information earlier in the production process. As a starting point, interest rates have an 'inflation premium' and components for risk factors. A lender will want the money paid back from a loan to at least have the same purchasing power as when loaned. The interest rate at a minimum equals the inflation rate to maintain purchasing power and this generally is based on the CPI. Changes in inflation lead to changes in interest rates and, in turn, in equity prices.\nThe PPI comes in two key main versions: final demand (FD) and intermediate demand (ID). The final demand portion is composed of six main price indexes: final demand goods; final demand trade services; final demand transportation and warehousing services; final demand services less trade, transportation, and warehousing; final demand construction; and overall final demand.\nThe intermediate demand portion of the FD-ID system tracks price changes for goods, services, and construction products sold to businesses as inputs to production, excluding capital investment. There are two parallel treatments of intermediate demand, each constructed from the identical set of commodity price indexes. The first treatment organizes commodities according to commodity type, and the second organizes commodities using a stage-based, production flow model.\nThe PPI is considered a precursor of both consumer price inflation and profits. If the prices paid to producers increase, businesses are faced with either charging higher prices or taking a cut in profits. The ability to pass along price increases depends on the strength and competitiveness of the marketplace.\nUnder the prior PPI system, the producer price index was substantially more volatile than the consumer price index because the CPI included services while the PPI did not. Volatility has been reduced substantially in the PPI-FD due to the inclusion of services but the PPI still is more volatile than the CPI. Wages are a bigger share of the costs at the retail level than at the producer level and this plays a role in the CPI��s lower volatility. Also, the PPI does not include owners�� equivalent rent��a large and slow moving component in the CPI. Food and energy prices are major sources of volatility in the PPI, hence, the greater focus on the 'core PPI' which excludes these two components.\nThe bond market rallies when the PPI decreases or posts only small increases, but bond prices fall when the PPI posts larger-than-expected gains. The equity market rallies with the bond market because low inflation promises low interest rates and is good for profits.", 
+//				"Producer price indexes for final demand and intermediate demand are major indicators of prices at the producer level. Changes in the producer price index are considered a leading indicator for consumer price changes.", 
+//				"The bond market will rally when the PPI decreases or posts only small increases, but bond prices will fall when the PPI post larger-than-expected gains. The equity market rallies with the bond market because low inflation promises low interest rates and is good for profits.\nChanges in the producer price index are considered a precursor of consumer price inflation. If prices that producers receive rise, then retailers will attempt to pass those costs to consumers. However, changes in the supply and demand for labor will affect wage changes with a delay because wages are institutionalized and contractual and have a larger impact on consumer prices than producer prices.\nFood and energy prices, which make up about 11 to 12 percent of the PPI-FD, are the major source of the volatility. Due to sharp movements in these two components, market players and economists have become accustomed to monitoring the PPI excluding food and energy. In shorthand, this is also referred to as the 'core' PPI. (In reality, what can be more 'core' than food and gasoline to consumers?)\nThe PPI for final demand gets the most attention, but market players have turned to the PPI for intermediate demand for early indications of inflation. This set of PPI data is organized in part by production flow. However, the earlier the stage of processing, the more volatile the index.", 
+//				"Monthly", 
+//				"Bureau of Labor Statistics (BLS), U.S. Department of Labor.", 
+//				"Around mid-month.", 
+//				"Data are for one month prior to release month. Data for June are released in July.", 
+//				"Yes.");
 		public static Event III_Retail_Sales = new Event(
 				USname, 
 				"Retail Sales", 
@@ -260,66 +273,115 @@ public enum US {
 				"Bureau of the Census, U.S. Department of Commerce.", 
 				"Mid-month.", 
 				"Data are for the previous month. Data for June are released in July", 
-				"Yes.");
+				"Yes.",
+				"13:30");
 		
-		public static Event II_Consumer_Confidence = new Event(
-				USname, 
-				"Consumer Confidence", 
-				"The Conference Board compiles a survey of consumer attitudes on the economy. The headline Consumer Confidence Index is based on consumers' perceptions of current business and employment conditions, as well as their expectations for six months hence regarding business conditions, employment, and income. Three thousand households across the country are surveyed each month.\nThe Conference Board changed its polling company in 2010. The current polling company is Nielsen Co. with the former being TNS Inc. The switchover reference month for the new data is November 2010. Because of the change in the polling service (even though the questions in the questionnaire are the same) the data are not completely consistent and November 2010 should be considered a break in the series. In general, while the level of consumer confidence is associated with consumer spending, the two do not move in tandem each and every month.", 
-				"The pattern in consumer attitudes can be a key influence on stock and bond markets. Consumer spending drives two-thirds of the economy and if the consumer is not confident, the consumer will not be willing to pull out the big bucks. Confidence impacts consumer spending which affects economic growth. For stocks, strong economic growth translates to healthy corporate profits and higher stock prices. For bonds, the focus is whether economic growth goes overboard and leads to inflation. Ideally, the economy walks that fine line between strong growth and excessive (inflationary) growth. This balance was achieved through much of the nineties. For this reason alone, investors in the stock and bond markets enjoyed huge gains during the bull market of the 1990s. Consumer confidence did shift down in tandem with the equity market between 2000 and 2002 and then recovered in 2003 and 2004. In 2008 and 2009, the credit crunch and past recession led confidence downward with consumer spending contracting in tandem. More recently during the economic recovery, consumer confidence has edged back up but has been outpaced by improvement in spending.\nSince consumer spending accounts for such a large portion of the economy, the markets are always eager to know what consumers are up to and how they might behave in the near future. The more confident consumers are about the economy and their own personal finances, the more likely they are to spend. It's easy to see how this index of consumer attitudes gives insight to the direction of the economy. Just note that changes in consumer confidence and retail sales don't move in tandem month by month.", 
-				None, 
-				None, 
-				"Monthly", 
-				"The Conference Board", 
-				"Last week of the month", 
-				"Data are for same month as the release month. Data for June are released in June.", 
-				"Yes");
-		public static Event II_Consumer_Sentiment = new Event(
-				USname, 
-				"Consumer Sentiment", 
-				"The University of Michigan's Consumer Survey Center questions 500 households each month on their financial conditions and attitudes about the economy. Consumer sentiment is directly related to the strength of consumer spending. Consumer confidence and consumer sentiment are two ways of talking about consumer attitudes. Among economic reports, consumer sentiment refers to the Michigan survey while consumer confidence refers to The Conference Board's survey. Preliminary estimates for a month are released at mid-month. Final estimates for a month are released near the end of the month.", 
-				"The pattern in consumer attitudes and spending is often the foremost influence on stock and bond markets. For stocks, strong economic growth translates to healthy corporate profits and higher stock prices. For bonds, the focus is whether economic growth goes overboard and leads to inflation. Ideally, the economy walks that fine line between strong growth and excessive (inflationary) growth. This balance was achieved through much of the nineties. For this reason alone, investors in the stock and bond markets enjoyed huge gains during the bull market of the 1990s. Consumer confidence did shift down in tandem with the equity market between 2000 and 2002 and then recovered in 2003 and 2004. More recently, the credit crunch and surge in gasoline prices led confidence downward in 2007. Despite a drop in gasoline prices, 2008 saw sentiment near record lows due to recession, a precipitous fall in stock prices, and fragile credit markets. However, consumer sentiment helped to confirm the easing of recession during 2009 as this index slowly rose from earlier lows. One should be aware that this report is released to private subscribers several minutes prior to release to the media. This may account for occasional market activity just prior to public release.\nConsumer spending accounts for more than two-thirds of the economy, so the markets are always dying to know what consumers are up to and how they might behave in the near future. The more confident consumers are about the economy and their own personal finances, the more likely they are to spend. With this in mind, it's easy to see how this index of consumer attitudes gives insight to the direction of the economy. Just note that changes in consumer confidence and retail sales don't move in tandem month by month.", 
-				None, 
-				None, 
-				"Monthly", 
-				"The Institute for Social Research (ISR) of the University of Michigan.", 
-				"Twice monthly. Preliminary estimates for a month are released at mid-month. Final estimates for a month are released near the end of the month. ", 
-				"Data are for the same month as the release month. Data for June are released in June. ", 
-				"Yes");
-		public static Event II_EIA_Petroleum_Status_Report = new Event(
-				USname, 
-				"EIA Petroleum Status Report", 
-				"The Energy Information Administration (EIA) provides weekly information on petroleum inventories in the U.S., whether produced here or abroad. The level of inventories helps determine prices for petroleum products. ", 
-				"Petroleum product prices are determined by supply and demand - just like any other good and service. During periods of strong economic growth, one would expect demand to be robust. If inventories are low, this will lead to increases in crude oil prices - or price increases for a wide variety of petroleum products such as gasoline or heating oil. If inventories are high and rising in a period of strong demand, prices may not need to increase at all, or as much. During a period of sluggish economic activity, demand for crude oil may not be as strong. If inventories are rising, this may push down oil prices.\nCrude oil is an important commodity in the global market. Prices fluctuate depending on supply and demand conditions in the world. Since oil is such an important part of the economy, it can also help determine the direction of inflation. In the U.S., consumer prices have moderated whenever oil prices have fallen, but have accelerated when oil prices have risen.", 
-				None, 
-				None, 
-				"Weekly", 
-				"Energy Information Administration (EIA), U.S. Department of Energy. ", 
-				"Wednesdays, except on federal holidays. ", 
-				"Each weekly report has data for the week ending the previous Friday. ", 
-				"No.");
-		public static Event I_Leading_Indicators = new Event(
-				USname, 
-				"Leading Indicators", 
-				"A composite index of ten economic indicators that should lead overall economic activity. This indicator was initially compiled by the Commerce Department but is now compiled and produced by The Conference Board. It has been revised many times in the past 30 years -- particularly when it has not done a good job of predicting turning points. ", 
-				"Investors need to keep their fingers on the pulse of the economy because it dictates how various types of investments will perform. By tracking economic data such as the index of leading indicators, investors will know what the economic backdrop is for the various markets. The stock market likes to see healthy economic growth because that translates to higher corporate profits. The bond market prefers less rapid growth and is extremely sensitive to whether the economy is growing too quickly -- and causing potential inflationary pressures. The index of leading indicators is designed to predict turning points in the economy -- such as recessions and recoveries. More specifically, it was designed to lead the index of coincident indicators, also now published by The Conference Board. Investors like to see composite indexes because they tell an easy story, although they are not always as useful as they promise. The majority of the components of the leading indicators have been reported earlier in the month so that the composite index doesn't necessarily reveal new information about the economy. Bond investors tend to be less interested in this index than equity investors. Also, the non-financial media tends to give this index more press than it deserves.", 
-				None, 
-				None, 
-				"Monthly", 
-				"The Conference Board.", 
-				"Third week of the month.", 
-				"Data are for the previous month. Data for June are released in July. ", 
-				"Yes");
-		public static Event I_MBA_Mortgage_Applications = new Event(
-				USname, 
-				"MBA Mortgage Applications", 
-				"The Mortgage Bankers' Association compiles various mortgage loan indexes. The purchase applications index measures applications at mortgage lenders. This is a leading indicator for single-family home sales and housing construction. ", 
-				"This provides a gauge of not only the demand for housing, but economic momentum. People have to be feeling pretty comfortable and confident in their own financial position to buy a house. Furthermore, this narrow piece of data has a powerful multiplier effect through the economy, and therefore across the markets and your investments. By tracking economic data such as the Mortgage Bankers Association purchase applications, investors can gain specific investment ideas as well as broad guidance for managing a portfolio.\nEach time the construction of a new home begins, it translates to more construction jobs, and income which will be pumped back into the economy. Once a home is sold, it generates revenues for the home builder and the realtor. It brings a myriad of consumption opportunities for the buyer. Refrigerators, washers, dryers and furniture are just a few items new home buyers might purchase. The economic 'ripple effect' can be substantial especially when you think a hundred thousand new households around the country are doing this every month.\nSince the economic backdrop is the most pervasive influence on financial markets, housing construction has a direct bearing on stocks, bonds and commodities. In a more specific sense, trends in the MBA purchase applications index carry valuable clues for the stocks of home builders, mortgage lenders and home furnishings companies.", 
-				None, 
-				None, 
-				"Weekly", 
-				"Mortgage Bankers Association", 
-				"Wednesdays", 
-				"Week-ending Friday before the release.", 
-				"No");
+//		public static Event II_Consumer_Confidence = new Event(
+//				USname, 
+//				"Consumer Confidence", 
+//				"The Conference Board compiles a survey of consumer attitudes on the economy. The headline Consumer Confidence Index is based on consumers' perceptions of current business and employment conditions, as well as their expectations for six months hence regarding business conditions, employment, and income. Three thousand households across the country are surveyed each month.\nThe Conference Board changed its polling company in 2010. The current polling company is Nielsen Co. with the former being TNS Inc. The switchover reference month for the new data is November 2010. Because of the change in the polling service (even though the questions in the questionnaire are the same) the data are not completely consistent and November 2010 should be considered a break in the series. In general, while the level of consumer confidence is associated with consumer spending, the two do not move in tandem each and every month.", 
+//				"The pattern in consumer attitudes can be a key influence on stock and bond markets. Consumer spending drives two-thirds of the economy and if the consumer is not confident, the consumer will not be willing to pull out the big bucks. Confidence impacts consumer spending which affects economic growth. For stocks, strong economic growth translates to healthy corporate profits and higher stock prices. For bonds, the focus is whether economic growth goes overboard and leads to inflation. Ideally, the economy walks that fine line between strong growth and excessive (inflationary) growth. This balance was achieved through much of the nineties. For this reason alone, investors in the stock and bond markets enjoyed huge gains during the bull market of the 1990s. Consumer confidence did shift down in tandem with the equity market between 2000 and 2002 and then recovered in 2003 and 2004. In 2008 and 2009, the credit crunch and past recession led confidence downward with consumer spending contracting in tandem. More recently during the economic recovery, consumer confidence has edged back up but has been outpaced by improvement in spending.\nSince consumer spending accounts for such a large portion of the economy, the markets are always eager to know what consumers are up to and how they might behave in the near future. The more confident consumers are about the economy and their own personal finances, the more likely they are to spend. It's easy to see how this index of consumer attitudes gives insight to the direction of the economy. Just note that changes in consumer confidence and retail sales don't move in tandem month by month.", 
+//				None, 
+//				None, 
+//				"Monthly", 
+//				"The Conference Board", 
+//				"Last week of the month", 
+//				"Data are for same month as the release month. Data for June are released in June.", 
+//				"Yes");
+//		public static Event II_Consumer_Sentiment = new Event(
+//				USname, 
+//				"Consumer Sentiment", 
+//				"The University of Michigan's Consumer Survey Center questions 500 households each month on their financial conditions and attitudes about the economy. Consumer sentiment is directly related to the strength of consumer spending. Consumer confidence and consumer sentiment are two ways of talking about consumer attitudes. Among economic reports, consumer sentiment refers to the Michigan survey while consumer confidence refers to The Conference Board's survey. Preliminary estimates for a month are released at mid-month. Final estimates for a month are released near the end of the month.", 
+//				"The pattern in consumer attitudes and spending is often the foremost influence on stock and bond markets. For stocks, strong economic growth translates to healthy corporate profits and higher stock prices. For bonds, the focus is whether economic growth goes overboard and leads to inflation. Ideally, the economy walks that fine line between strong growth and excessive (inflationary) growth. This balance was achieved through much of the nineties. For this reason alone, investors in the stock and bond markets enjoyed huge gains during the bull market of the 1990s. Consumer confidence did shift down in tandem with the equity market between 2000 and 2002 and then recovered in 2003 and 2004. More recently, the credit crunch and surge in gasoline prices led confidence downward in 2007. Despite a drop in gasoline prices, 2008 saw sentiment near record lows due to recession, a precipitous fall in stock prices, and fragile credit markets. However, consumer sentiment helped to confirm the easing of recession during 2009 as this index slowly rose from earlier lows. One should be aware that this report is released to private subscribers several minutes prior to release to the media. This may account for occasional market activity just prior to public release.\nConsumer spending accounts for more than two-thirds of the economy, so the markets are always dying to know what consumers are up to and how they might behave in the near future. The more confident consumers are about the economy and their own personal finances, the more likely they are to spend. With this in mind, it's easy to see how this index of consumer attitudes gives insight to the direction of the economy. Just note that changes in consumer confidence and retail sales don't move in tandem month by month.", 
+//				None, 
+//				None, 
+//				"Monthly", 
+//				"The Institute for Social Research (ISR) of the University of Michigan.", 
+//				"Twice monthly. Preliminary estimates for a month are released at mid-month. Final estimates for a month are released near the end of the month. ", 
+//				"Data are for the same month as the release month. Data for June are released in June. ", 
+//				"Yes");
+//		public static Event II_EIA_Petroleum_Status_Report = new Event(
+//				USname, 
+//				"EIA Petroleum Status Report", 
+//				"The Energy Information Administration (EIA) provides weekly information on petroleum inventories in the U.S., whether produced here or abroad. The level of inventories helps determine prices for petroleum products. ", 
+//				"Petroleum product prices are determined by supply and demand - just like any other good and service. During periods of strong economic growth, one would expect demand to be robust. If inventories are low, this will lead to increases in crude oil prices - or price increases for a wide variety of petroleum products such as gasoline or heating oil. If inventories are high and rising in a period of strong demand, prices may not need to increase at all, or as much. During a period of sluggish economic activity, demand for crude oil may not be as strong. If inventories are rising, this may push down oil prices.\nCrude oil is an important commodity in the global market. Prices fluctuate depending on supply and demand conditions in the world. Since oil is such an important part of the economy, it can also help determine the direction of inflation. In the U.S., consumer prices have moderated whenever oil prices have fallen, but have accelerated when oil prices have risen.", 
+//				None, 
+//				None, 
+//				"Weekly", 
+//				"Energy Information Administration (EIA), U.S. Department of Energy. ", 
+//				"Wednesdays, except on federal holidays. ", 
+//				"Each weekly report has data for the week ending the previous Friday. ", 
+//				"No.");
+//		public static Event I_Leading_Indicators = new Event(
+//				USname, 
+//				"Leading Indicators", 
+//				"A composite index of ten economic indicators that should lead overall economic activity. This indicator was initially compiled by the Commerce Department but is now compiled and produced by The Conference Board. It has been revised many times in the past 30 years -- particularly when it has not done a good job of predicting turning points. ", 
+//				"Investors need to keep their fingers on the pulse of the economy because it dictates how various types of investments will perform. By tracking economic data such as the index of leading indicators, investors will know what the economic backdrop is for the various markets. The stock market likes to see healthy economic growth because that translates to higher corporate profits. The bond market prefers less rapid growth and is extremely sensitive to whether the economy is growing too quickly -- and causing potential inflationary pressures. The index of leading indicators is designed to predict turning points in the economy -- such as recessions and recoveries. More specifically, it was designed to lead the index of coincident indicators, also now published by The Conference Board. Investors like to see composite indexes because they tell an easy story, although they are not always as useful as they promise. The majority of the components of the leading indicators have been reported earlier in the month so that the composite index doesn't necessarily reveal new information about the economy. Bond investors tend to be less interested in this index than equity investors. Also, the non-financial media tends to give this index more press than it deserves.", 
+//				None, 
+//				None, 
+//				"Monthly", 
+//				"The Conference Board.", 
+//				"Third week of the month.", 
+//				"Data are for the previous month. Data for June are released in July. ", 
+//				"Yes");
+//		public static Event I_MBA_Mortgage_Applications = new Event(
+//				USname, 
+//				"MBA Mortgage Applications", 
+//				"The Mortgage Bankers' Association compiles various mortgage loan indexes. The purchase applications index measures applications at mortgage lenders. This is a leading indicator for single-family home sales and housing construction. ", 
+//				"This provides a gauge of not only the demand for housing, but economic momentum. People have to be feeling pretty comfortable and confident in their own financial position to buy a house. Furthermore, this narrow piece of data has a powerful multiplier effect through the economy, and therefore across the markets and your investments. By tracking economic data such as the Mortgage Bankers Association purchase applications, investors can gain specific investment ideas as well as broad guidance for managing a portfolio.\nEach time the construction of a new home begins, it translates to more construction jobs, and income which will be pumped back into the economy. Once a home is sold, it generates revenues for the home builder and the realtor. It brings a myriad of consumption opportunities for the buyer. Refrigerators, washers, dryers and furniture are just a few items new home buyers might purchase. The economic 'ripple effect' can be substantial especially when you think a hundred thousand new households around the country are doing this every month.\nSince the economic backdrop is the most pervasive influence on financial markets, housing construction has a direct bearing on stocks, bonds and commodities. In a more specific sense, trends in the MBA purchase applications index carry valuable clues for the stocks of home builders, mortgage lenders and home furnishings companies.", 
+//				None, 
+//				None, 
+//				"Weekly", 
+//				"Mortgage Bankers Association", 
+//				"Wednesdays", 
+//				"Week-ending Friday before the release.", 
+//				"No");
+		
+		
+		public static Event getUSEvent(String eventName){
+			if("Consumer Price Index".equals(eventName)){
+				return III_Consumer_Price_Index;
+			}
+			if("Durable Goods Orders".equals(eventName)){
+				return III_Durable_Goods_Orders;
+			}
+			if("Employment Situation".equals(eventName)){
+				return IIIII_Employment_Situation;
+			}
+			if("Existing Home Sales".equals(eventName)){
+				return III_Existing_Home_Sales;
+			}
+			if("FOMC Meeting Announcement".equals(eventName)){
+				return III_FOMC_Meeting_Announcement;
+			}
+			if("GDP".equals(eventName)){
+				return III_GDP;
+			}
+			if("Housing Starts".equals(eventName)){
+				return III_Housing_Starts;
+			}
+			if("International Trade".equals(eventName)){
+				return III_International_Trade;
+			}
+			if("ISM Mfg Index".equals(eventName)){
+				return III_ISM_Mfg_Index;
+			}
+			if("Jobless Claims".equals(eventName)){
+				return III_Jobless_Claims;
+			}
+			if("New Home Sales".equals(eventName)){
+				return III_New_Home_Sales;
+			}
+			if("Personal Income and Outlays".equals(eventName)){
+				return III_Personal_Income_and_Outlays;
+			}
+			if("Philadelphia Fed Survey".equals(eventName)){
+				return Philadelphia_Fed_Business_Outlook_Survey;
+			}
+			if("Retail Sales".equals(eventName)){
+				return III_Retail_Sales;
+			}
+			
+			return null;
+		}
 }

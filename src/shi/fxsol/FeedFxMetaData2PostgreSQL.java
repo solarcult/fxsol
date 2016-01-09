@@ -10,5 +10,4 @@ public class FeedFxMetaData2PostgreSQL {
 		File dataDir = new File("fxmetadata");
 		LoadCVSData2FxMetaData2DB.loadFoler2DB(dataDir);
 	}
-
 }

@@ -4,6 +4,14 @@ import java.util.Calendar;
 
 public class FxCalenderUtils {
 	
+	/**
+	 * 计算某一年第几个月第几周的星期几是哪一天
+	 * @param year
+	 * @param month
+	 * @param week
+	 * @param day
+	 * @return
+	 */
 	public static Calendar getAyearBmonthXweekYday(int year, int month, int week , int day){
 		Calendar wantCalendar = Calendar.getInstance();
 		wantCalendar.set(year,month,1);

@@ -4,7 +4,7 @@ public enum EMU {
 	european, monetary, union;
 	public static String EMUname = "European Monetary Union";
 	public static String None = "None is fucking none.";
-	
+	/*
 	public static Event III_EC_Economic_Sentiment = new Event(
 			EMUname, 
 			"EC Economic Sentiment", 
@@ -95,4 +95,5 @@ public enum EMU {
 			"Second half of the month.", 
 			"Current month", 
 			"Markit do not revise underlying survey data after first publication, but seasonal adjustment factors may be revised from time to time as appropriate which will affect the seasonally adjusted data series. Historical data relating to the underlying (unadjusted) numbers, first published seasonally adjusted series and subsequently revised data are available to subscribers from Markit. ");
+	*/		
 }

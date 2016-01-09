@@ -14,6 +14,7 @@ public class Event {
 	private String availability;
 	private String coverage;
 	private String revisions; 
+	private String hour;
 	
 	public Event(
 			String country,
@@ -26,7 +27,8 @@ public class Event {
 			String source,
 			String availability,
 			String coverage,
-			String revisions){
+			String revisions,
+			String hour){
 		this.country = country;
 		this.name = name;
 		this.definition = definition;
@@ -38,5 +40,6 @@ public class Event {
 		this.availability = availability;
 		this.coverage = coverage;
 		this.revisions = revisions;
+		this.hour = hour;
 	}
 }
