@@ -1,10 +1,12 @@
 package shi.fxsol.domain.eventdef;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public enum US {
 	we,are,living,in,america;
 	
+		public static String US = "US";
 		public static String USname = "United States";
 		public static String None = "None is nothing.";
 		
@@ -384,5 +386,26 @@ public enum US {
 			}
 			
 			return null;
+		}
+		
+		public static List<EventDef> listEventDefs(){
+			List<EventDef> events = new ArrayList<EventDef>();
+			
+			events.add(III_Consumer_Price_Index);
+			events.add(III_Durable_Goods_Orders);
+			events.add(IIIII_Employment_Situation);
+			events.add(III_Existing_Home_Sales);
+			events.add(III_FOMC_Meeting_Announcement);
+			events.add(III_GDP);
+			events.add(III_Housing_Starts);
+			events.add(III_International_Trade);
+			events.add(III_ISM_Mfg_Index);
+			events.add(III_Jobless_Claims);
+			events.add(III_New_Home_Sales);
+			events.add(III_Personal_Income_and_Outlays);
+			events.add(Philadelphia_Fed_Business_Outlook_Survey);
+			events.add(III_Retail_Sales);
+			
+			return events;
 		}
 }

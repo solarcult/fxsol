@@ -38,11 +38,11 @@ public class LoadEventData2EventDB {
 		List<Event> events = new ArrayList<>();
 		
 		if(eventfile.isFile()){
-			String eventname = eventfile.getName().substring(0,eventfile.getName().length()-".txt".length()).trim();
+			String eventdefname = eventfile.getName().substring(0,eventfile.getName().length()-".txt".length()).trim();
 			
 			EventDef eventDef = null;
 			if("US".equals(country.toUpperCase())){
-				eventDef = US.getUSEvent(eventname);
+				eventDef = US.getUSEvent(eventdefname);
 			}
 			if(eventDef==null) return events;
 			
@@ -56,7 +56,7 @@ public class LoadEventData2EventDB {
 				
 				while(oneline!=null){
 					try {
-						Event event = EventReadUtils.retrieveOneEvent(country, eventname, eventDef.getTimeOfDay(), oneline);
+						Event event = EventReadUtils.retrieveOneEvent(country, eventDef.getName(), eventDef.getTimeOfDay(), oneline);
 						if(event!=null){
 							events.add(event);
 						}
@@ -75,7 +75,6 @@ public class LoadEventData2EventDB {
 						e.printStackTrace();
 					}
 			}
-			
 		}
 		
 		return events;
