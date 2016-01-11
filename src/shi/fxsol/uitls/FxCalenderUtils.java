@@ -14,7 +14,7 @@ public class FxCalenderUtils {
 	 */
 	public static Calendar getAyearBmonthXweekYday(int year, int month, int week , int day){
 		Calendar wantCalendar = Calendar.getInstance();
-		wantCalendar.set(year,month,1);
+		wantCalendar.set(year,month-1,1);
 		//SUNDAY:1 SATURDAY:7
 		int dayofweek = wantCalendar.get(Calendar.DAY_OF_WEEK);
 		int plusdays = 0;

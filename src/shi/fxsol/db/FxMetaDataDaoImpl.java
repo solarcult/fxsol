@@ -11,6 +11,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import shi.fxsol.domain.FxMetaData;
+import shi.fxsol.domain.FxTimeFrame;
 
 public class FxMetaDataDaoImpl {
 	
@@ -112,7 +113,7 @@ public class FxMetaDataDaoImpl {
 		}
 	}
 	
-	public static List<FxMetaData> listFxMetaDatas4nameXtimeframe(String fxname,String fxtimeframe,int lastNmonth){
+	public static List<FxMetaData> listFxMetaDatas4nameXtimeframe(String fxname,FxTimeFrame fxtimeframe,int lastNmonth){
 		List<FxMetaData> fxMetaDatas = new ArrayList<FxMetaData>();
 		
 		if(lastNmonth<=0){
@@ -133,13 +134,112 @@ public class FxMetaDataDaoImpl {
 					+ "open,high,low,close,volumn,"
 					+ "weekofday,dayofweekinmonth,specialweek "
 					+ "from fxmetadata "
-					+ "where name = ? and timeframe = ? and datetime > ? order by datetime asc"
+					+ "where name = ? and timeframe = ? and datetime >= ? order by datetime asc"
 					);
 			
 			preStatement.setString(1, fxname);
-			preStatement.setString(2, fxtimeframe);
+			preStatement.setString(2, fxtimeframe.getSTime());
 			preStatement.setDate(3, new java.sql.Date(startdate.getTimeInMillis()));
 			
+			
+			ResultSet resultSet = preStatement.executeQuery();
+			while(resultSet.next())
+			{
+				String name = resultSet.getString(2);
+				String timeframe = resultSet.getString(3);
+				
+		        int year = resultSet.getInt(5);
+		        int month = resultSet.getInt(6);
+		        int day = resultSet.getInt(7);
+		        int hour = resultSet.getInt(8);
+		        int minute = resultSet.getInt(9);
+		        
+		        Calendar datetime = Calendar.getInstance();
+		        datetime.set(year,month,day,hour,minute);
+		        
+		        String sdate = resultSet.getString(10);
+		        String stime = resultSet.getString(11);
+		        
+		        int open = resultSet.getInt(12);
+		        int high = resultSet.getInt(13);
+		        int low = resultSet.getInt(14);
+		        int close = resultSet.getInt(15);
+		        int volumn = resultSet.getInt(16);
+		        
+		        String weekofday = resultSet.getString(17);
+		        int dayofweekinmonth = resultSet.getInt(18);
+		        String specialweek = resultSet.getString(19);
+		        
+		        FxMetaData fxMetaData = new FxMetaData();
+		        
+		        fxMetaData.setName(name);
+		        fxMetaData.setTimeframe(timeframe);
+		        fxMetaData.setDatetime(datetime);
+				fxMetaData.setYear(year);
+				fxMetaData.setMonth(month);
+				fxMetaData.setDay(day);
+				fxMetaData.setHour(hour);
+				fxMetaData.setMinute(minute);
+				fxMetaData.setSdate(sdate);
+				fxMetaData.setStime(stime);
+				fxMetaData.setOpen(open);
+				fxMetaData.setHigh(high);
+				fxMetaData.setLow(low);
+				fxMetaData.setClose(close);
+				fxMetaData.setVolumn(volumn);
+				
+				fxMetaData.setWeekofday(weekofday);
+				fxMetaData.setDayOfWeekInMonth(dayofweekinmonth);
+				fxMetaData.setSpecialweek(specialweek);
+				
+				fxMetaDatas.add(fxMetaData);
+			}
+			
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try {
+				if(preStatement!=null) preStatement.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return fxMetaDatas;
+	}
+	
+	public static List<FxMetaData> listFxMetaDatas4nameXtimeframe(String fxname,FxTimeFrame fxtimeframe,int _year ,int _month , int _day , int _hour ,int _minute, int range){
+		List<FxMetaData> fxMetaDatas = new ArrayList<FxMetaData>();
+		
+		Calendar startdate =Calendar.getInstance();
+		startdate.set(_year,_month-1,_day,_hour,_minute-1);
+
+		Calendar enddate =Calendar.getInstance();
+		enddate.set(_year,_month-1,_day,_hour,_minute-1);
+		enddate.add(Calendar.MINUTE, fxtimeframe.getTime()*range);
+		
+		
+		Connection connection = DataBaseManager.getConnection();
+		PreparedStatement preStatement = null;
+		try
+		{
+			preStatement = connection.prepareStatement(
+					"select "
+					+ "id,name,timeframe,datetime,"
+					+ "year,month,day,hour,minute,sdate,stime,"
+					+ "open,high,low,close,volumn,"
+					+ "weekofday,dayofweekinmonth,specialweek "
+					+ "from fxmetadata "
+					+ "where name = ? and timeframe = ? and datetime >= ? and datetime <= ? order by datetime asc"
+					);
+			
+			preStatement.setString(1, fxname);
+			preStatement.setString(2, fxtimeframe.getSTime());
+			preStatement.setTimestamp(3, new Timestamp(startdate.getTimeInMillis()));
+			preStatement.setTimestamp(4, new Timestamp(enddate.getTimeInMillis()));
 			
 			ResultSet resultSet = preStatement.executeQuery();
 			while(resultSet.next())
@@ -228,7 +328,8 @@ public class FxMetaDataDaoImpl {
 		
 		insertFxMetaDataList(fxMetaDatas);
 		*/
-		for(FxMetaData fx : listFxMetaDatas4nameXtimeframe("Me", "60", 24)){
+//		List<FxMetaData> fxMetaDatas = listFxMetaDatas4nameXtimeframe("EUR/USD", FxTimeFrame.T60, 24);
+		for(FxMetaData fx : listFxMetaDatas4nameXtimeframe("EURUSD", FxTimeFrame.T60, 1)){
 			System.out.println(fx);
 		}
 		

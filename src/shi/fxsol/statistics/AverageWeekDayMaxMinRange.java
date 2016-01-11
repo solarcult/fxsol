@@ -7,13 +7,14 @@ import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import shi.fxsol.db.FxMetaDataDaoImpl;
 import shi.fxsol.domain.FxMetaData;
+import shi.fxsol.domain.FxTimeFrame;
 import shi.fxsol.uitls.EnhancedKeyAlwaysGetDescriptiveStatisticsMap;
 import shi.fxsol.uitls.FxCalenderUtils;
 
 public class AverageWeekDayMaxMinRange {
 
 	//按照星期N算平均最大波动
-	public static void analyzeWeekdayMaxMinRange(String name,String timeframe,int lastNmonth){
+	public static void analyzeWeekdayMaxMinRange(String name,FxTimeFrame timeframe,int lastNmonth){
 
  		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
 		EnhancedKeyAlwaysGetDescriptiveStatisticsMap map = new EnhancedKeyAlwaysGetDescriptiveStatisticsMap();
@@ -29,7 +30,7 @@ public class AverageWeekDayMaxMinRange {
 		}
 	}
 	
-	public static void analyzeSpecialweekofDayMaxMinRange(String name,String timeframe,int lastNmonth){
+	public static void analyzeSpecialweekofDayMaxMinRange(String name,FxTimeFrame timeframe,int lastNmonth){
 
  		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
 		EnhancedKeyAlwaysGetDescriptiveStatisticsMap map = new EnhancedKeyAlwaysGetDescriptiveStatisticsMap();
@@ -45,7 +46,7 @@ public class AverageWeekDayMaxMinRange {
 		}
 	}
 	
-	public static void analyzeMonthSpecialweekofDayMaxMinRange(String name,String timeframe,int lastNmonth){
+	public static void analyzeMonthSpecialweekofDayMaxMinRange(String name,FxTimeFrame timeframe,int lastNmonth){
 
  		List<FxMetaData> fxMetaDatas = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe( name, timeframe, lastNmonth);
 		EnhancedKeyAlwaysGetDescriptiveStatisticsMap map = new EnhancedKeyAlwaysGetDescriptiveStatisticsMap();
@@ -65,6 +66,6 @@ public class AverageWeekDayMaxMinRange {
 //		analyzeWeekdayMaxMinRange();
 //		analyzeSpecialweekofDayMaxMinRange("EURCNH","1440",24);
 //		analyzeSpecialweekofDayMaxMinRange("EURUSD","1440",24);
-		analyzeMonthSpecialweekofDayMaxMinRange("EURUSD","1440",72);
+		analyzeMonthSpecialweekofDayMaxMinRange("EURUSD",FxTimeFrame.T1440,72);
 	}
 }

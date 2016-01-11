@@ -6,8 +6,7 @@ import java.util.List;
 public enum US {
 	we,are,living,in,america;
 	
-		public static String US = "US";
-		public static String USname = "United States";
+		public static String USname = "US";
 		public static String None = "None is nothing.";
 		
 		public static EventDef III_Consumer_Price_Index = new EventDef(

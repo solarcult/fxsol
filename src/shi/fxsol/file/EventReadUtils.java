@@ -38,7 +38,7 @@ public class EventReadUtils {
 		String sdate = year+"."+month+"."+day;
 		
 		Calendar edate = Calendar.getInstance();
-		edate.set(year, month, day, hour, minute);
+		edate.set(year, month-1, day, hour, minute);
 		
 		event.setCountry(country);
 		event.setName(name);

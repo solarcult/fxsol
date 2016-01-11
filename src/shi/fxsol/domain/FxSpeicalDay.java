@@ -25,7 +25,7 @@ public class FxSpeicalDay {
 		String result = null;
 		Calendar x = Calendar.getInstance();
 		x.setLenient(false);
-		x.set(year,month,day);
+		x.set(year,month-1,day);
 		
 		return getSpecialWeek(x);
 	}

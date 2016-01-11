@@ -46,7 +46,7 @@ public class CSVReadUtils {
 		int volumn = Integer.parseInt(st.nextToken());
 		
 		Calendar calendertime = Calendar.getInstance();
-		calendertime.set(year, month, day, hourOfDay, minute,0);
+		calendertime.set(year, month-1, day, hourOfDay, minute,0);
 		
 		fxMetaData.setDatetime(calendertime);
 		fxMetaData.setYear(year);

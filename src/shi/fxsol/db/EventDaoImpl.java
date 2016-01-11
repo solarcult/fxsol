@@ -118,7 +118,7 @@ public class EventDaoImpl {
 					+ "id,year,month,day,hour,minute,sdate,stime,"
 					+ "expect,actual,diff,name,country "
 					+ "from event "
-					+ "where country =? and name = ? and edate > ? order by edate asc"
+					+ "where country =? and name = ? and edate >= ? order by edate asc"
 					);
 			
 			preStatement.setString(1, _country);
