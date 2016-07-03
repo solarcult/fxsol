@@ -18,14 +18,16 @@ public class EventHoursRange {
 			List<Event> events = EventDaoImpl.listEvents(eventDef.getCountry(), eventDef.getName(), 16);
 			for(Event event : events){
 				//分析每一个事件
-				System.out.println("\n"+event.getName());
-				List<FxMetaData> fxs = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe("EURUSD", FxTimeFrame.T30, event.getYear(), event.getMonth(), event.getDay(), event.getHour(), event.getMinute(), 3);
+//				System.out.println("\n"+event.getName());
+				List<FxMetaData> fxs = FxMetaDataDaoImpl.listFxMetaDatas4nameXtimeframe("EURUSD", FxTimeFrame.T30, event.getYear(), event.getMonth(), event.getDay(), event.getHour()+1, event.getMinute(), 2);
 				for(FxMetaData fx : fxs){
 					double diff = event.getDiff();
 					if(event.getName().equals("Employment Situation")){
-						diff = diff/1000;
-					}
+//						diff = diff/1000;
+						diff = event.getActual()/1000;
+					}else continue;
 					double range = (fx.getHigh() - fx.getLow());
+					System.out.println(fx.getSdate()+" "+fx.getStime());
 					System.out.println(range + " -> "+ diff);
 					System.out.println(range/diff);
 				}
